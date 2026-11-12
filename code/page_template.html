@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coast or herds? Modelling the route out of Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+.viz-root{color-scheme:light;--surface-1:#fcfcfb;--surface-2:#f3f2ee;--text-primary:#0b0b0b;--text-secondary:#52514e;--text-muted:#8a8984;--rule:#e2e0da;--grid:#ecebe6;
+ --s-coastal:#2a78d6;--s-terr:#eb6834;--s-mixed:#1baf7a;--band:#2a78d6;}
+@media (prefers-color-scheme: dark){:root:where(:not([data-theme="light"])) .viz-root{color-scheme:dark;--surface-1:#1a1a19;--surface-2:#232321;--text-primary:#f0efec;--text-secondary:#c3c2b7;--text-muted:#8f8e86;--rule:#33332f;--grid:#2a2a27;--s-coastal:#3987e5;--s-terr:#d95926;--s-mixed:#199e70;--band:#3987e5;}}
+:root[data-theme="dark"] .viz-root{color-scheme:dark;--surface-1:#1a1a19;--surface-2:#232321;--text-primary:#f0efec;--text-secondary:#c3c2b7;--text-muted:#8f8e86;--rule:#33332f;--grid:#2a2a27;--s-coastal:#3987e5;--s-terr:#d95926;--s-mixed:#199e70;--band:#3987e5;}
+*{box-sizing:border-box}
+body{margin:0}
+.viz-root{background:var(--surface-1);color:var(--text-primary);font:16px/1.6 Inter,system-ui,sans-serif;min-height:100vh}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 60px}
+h1{font:600 clamp(28px,6vw,40px)/1.12 "Source Serif 4",Georgia,serif;margin:0 0 10px;letter-spacing:-.01em}
+h2{font:600 24px/1.25 "Source Serif 4",Georgia,serif;margin:44px 0 10px}
+h3{font:600 15px/1.3 Inter,sans-serif;margin:22px 0 6px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.04em}
+.dek{color:var(--text-secondary);font-size:18px;margin:0 0 20px}
+p{margin:0 0 14px}
+.verdict{background:var(--surface-2);border-left:3px solid var(--s-coastal);padding:16px 18px;border-radius:4px;margin:20px 0}
+.verdict ul{margin:6px 0 0;padding-left:20px}.verdict li{margin:6px 0}
+.note{background:var(--surface-2);padding:12px 14px;border-radius:4px;font-size:15px;color:var(--text-secondary)}
+figure{margin:18px 0 24px}
+figcaption{font-size:13.5px;color:var(--text-secondary);margin-top:6px}
+img.map{width:100%;height:auto;border-radius:4px;display:block;border:1px solid var(--rule)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-secondary);margin:8px 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+.tabs{display:flex;gap:6px;margin:8px 0 10px;flex-wrap:wrap}
+.tabs button{font:500 14px Inter,sans-serif;border:1px solid var(--rule);background:transparent;color:var(--text-secondary);padding:7px 12px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.tabs button[aria-pressed="true"]{background:var(--text-primary);color:var(--surface-1);border-color:var(--text-primary)}
+.chart{position:relative;width:100%}
+.chart svg{display:block;width:100%;overflow:visible}
+.tip{position:absolute;pointer-events:none;background:var(--text-primary);color:var(--surface-1);font-size:12.5px;line-height:1.4;padding:6px 9px;border-radius:5px;white-space:nowrap;opacity:0;transition:opacity .1s;z-index:5}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:8px 0 6px}
+th,td{padding:8px 6px;border-bottom:1px solid var(--rule);text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+thead th{font-weight:600;color:var(--text-secondary);font-size:13px}
+td.best{font-weight:600}
+.k{color:var(--text-muted);font-size:12.5px;display:block}
+.params td{font-size:13.5px}
+ol.src{font-size:14px;color:var(--text-secondary);padding-left:20px}ol.src li{margin:5px 0}
+a{color:var(--s-coastal)}
+.axis text{fill:var(--text-muted);font-size:11px;font-family:Inter,sans-serif}
+.axis line,.axis path{stroke:var(--rule)}
+.gridl{stroke:var(--grid)}
+.lbl{fill:var(--text-secondary);font-size:11.5px;font-family:Inter,sans-serif}
+.lbl-strong{fill:var(--text-primary);font-size:12px;font-weight:600;font-family:Inter,sans-serif}
+.clim-read{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--text-secondary);margin:4px 0 8px}.clim-read b{color:var(--text-primary)}
+.slider-row{display:flex;align-items:center;gap:10px;margin:10px 0 2px}.slider-row input{flex:1;accent-color:var(--text-primary)}
+.slider-row button{width:40px;height:40px;border-radius:50%;border:1px solid var(--rule);background:var(--surface-2);color:var(--text-primary);font-size:15px;cursor:pointer}
+details{margin:10px 0}summary{cursor:pointer;color:var(--text-secondary);font-size:14.5px}
+</style>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+
+<h1>Coast or herds? A Monte Carlo test of the route out of Africa</h1>
+<p class="dek">A paleo-landscape model of 65,000–85,000 years ago, run __N__ × 2 times. It compares a coast-hugging, shellfish-eating dispersal with one that follows big game inland.</p>
+
+<div class="verdict" id="verdict">
+<strong>Short answer</strong>
+<ul>
+<li><b>Your instinct holds up on speed.</b> In paired runs (same climate, same sea level, same walking speed), the coastal strategy reached Sahul first in <b><span id="v-win"></span></b> of runs, by a median of about <b><span id="v-delta"></span> years</b>.</li>
+<li><b>Your "the sites are sunk" point is real and measurable.</b> A median <b><span id="v-sunk-c"></span></b> of the coastal route is now underwater, vs <span id="v-sunk-t"></span> for the inland route, and this grid undercounts it.</li>
+<li><b>Pure beachcombing loses on fit to the evidence.</b> Humans were in interior Arabia (the Nefud lakes, ~95–55 ka), and a coast-only population rarely gets there. The best-fitting model is a <b>mixed forager</b>: coast-anchored, but pushing up rivers and into green inland basins when rain allowed.</li>
+<li><b>The current evidence can't break the tie.</b> Fitting the model to the known sites pins down speed (~3 km/yr) and an early exit (~80 ka, in a wet phase), but not how rich the coast was. Drowned sites, mostly in 10–50 m of water, are the test.</li>
+<li><b>The deciding assumption is coastal productivity.</b> If the shore was at least ~85% as rich as the best savanna, the coastal route wins almost every time. Below that, it doesn't.</li>
+</ul>
+</div>
+
+<h2>First, a correction: the seas were lower, not higher</h2>
+<p>During the exit window, ice sheets held so much water that sea level sat roughly 60–90 m below today's. The Persian Gulf was a dry river valley, the "Gulf Oasis", fed by the Tigris-Euphrates and springs. Bab-el-Mandeb narrowed to a strait a few kilometres wide, and the Sunda shelf joined Sumatra, Java and Borneo to Asia. The coastline people would have followed lies 50–150 km offshore of today's, under water. That makes your hypothesis hard to test from sites, which is exactly why it's worth modelling.</p>
+<figure>
+<img class="map" src="__MAP_SHELF__" alt="Map of the Indian Ocean rim showing land exposed at 80 m lower sea level">
+<div class="legend"><span><i class="sw" style="background:#e3ded4"></i>Land today</span><span><i class="sw" style="background:#a89e8c"></i>Dry land at −80 m (now seabed)</span><span><i class="sw" style="background:#edf2f7;border:1px solid var(--rule)"></i>Sea at −80 m</span></div>
+<figcaption>ETOPO relief at 20 arc-minutes (~37 km), sea level −80 m, as around 68–64 ka and again ~50–45 ka. Dots are the evidence points the model is scored against.</figcaption>
+</figure>
+
+<h2>How the model works</h2>
+<p>It is a <b>time-dependent least-cost dispersal model</b>. The map is a grid of ~79,000 cells from Libya to New Guinea. Every 1,000 years, sea level redraws the coast, and a humidity index switches the Saharo-Arabian desert belt between "Green Arabia" savanna and hyper-arid desert. Each strategy turns that landscape into a speed surface: how fast a foraging population's frontier can advance through each cell. A frontier can't wait in a cell that turns uninhabitable, so a population caught inland when the rains fail dies out. Sea gaps cost an expected waiting time that grows steeply with width. Both strategies get the same boats.</p>
+<table class="params">
+<thead><tr><th>Strategy</th><th style="text-align:left">What makes a cell good</th></tr></thead>
+<tbody>
+<tr><td><b style="color:var(--s-coastal)">Coastal</b></td><td style="text-align:left">Within ~37 km of the shore. Quality = coastal productivity × fresh water. Arid coasts keep some water from coastal springs even in dry phases. Inland is used only weakly. No re-learning cost while staying on the shore.</td></tr>
+<tr><td><b style="color:var(--s-terr)">Megafauna</b></td><td style="text-align:left">Grassland and game. Quality = biome × rainfall pulse × altitude, with river corridors (Nile, Tigris-Euphrates, Indus, the Gulf basin) as refuges. Pays a re-tooling delay every time it enters a new biome.</td></tr>
+<tr><td><b style="color:var(--s-mixed)">Mixed</b></td><td style="text-align:left">Takes whichever is better in each cell.</td></tr>
+</tbody></table>
+
+<h3>Climate inputs (median and 10–90% range across runs)</h3>
+<div class="chart" id="c-sl"></div>
+<div class="chart" id="c-h" style="margin-top:10px"></div>
+<p class="note" style="margin-top:12px">Every uncertain number is drawn at random in each run, from wide ranges. That covers sea level (±8 m, ±1.5 kyr), the timing and strength of each humid pulse, monsoon strength, front speed (0.7–6 km/yr), coastal productivity (0.7–1.2× the best savanna), coastal fresh water in droughts, re-tooling cost (0–1,500 yr), and sea-crossing ability. All three strategies are run on the <i>same</i> draw, so the comparisons are paired.</p>
+
+<h2>Where each strategy goes</h2>
+<p>These maps show how often each cell sits on the fastest path to Sahul (exit from the Horn of Africa between 85 and 72 ka). The coastal route runs straight along the now-drowned shelf. The megafauna route crosses Arabia during the wet MIS 5a window, then fans across Iran, north India and the dry Sunda savanna.</p>
+<div class="tabs" role="group" aria-label="Strategy">
+<button data-s="coastal" aria-pressed="true"><i class="sw" style="background:var(--s-coastal)"></i>Coastal</button>
+<button data-s="terrestrial" aria-pressed="false"><i class="sw" style="background:var(--s-terr)"></i>Megafauna</button>
+<button data-s="mixed" aria-pressed="false"><i class="sw" style="background:var(--s-mixed)"></i>Mixed</button>
+</div>
+<figure id="route-fig"><img class="map" id="route-img" src="__MAP_coastal__" alt="Route density map">
+<figcaption id="route-cap">Darker = more runs used that cell. Grey-brown = shelf that was dry land then and is seabed now.</figcaption></figure>
+
+
+<h2>Climate overlay: watch it unfold</h2>
+<p>Drag through time. The land colour is the model's habitat quality for big-game hunters, set by rainfall, biome and altitude: pale is desert, dark is rich grassland or woodland. The coastline moves with sea level, and the dotted line is today's coast. The coloured line encloses everywhere the chosen strategy had reached in at least half of 150 runs.</p>
+<div class="tabs" role="group" aria-label="Strategy for climate overlay" id="clim-tabs">
+<button data-s="coastal" aria-pressed="false"><i class="sw" style="background:var(--s-coastal)"></i>Coastal</button>
+<button data-s="terrestrial" aria-pressed="false"><i class="sw" style="background:var(--s-terr)"></i>Megafauna</button>
+<button data-s="mixed" aria-pressed="true"><i class="sw" style="background:var(--s-mixed)"></i>Mixed</button>
+</div>
+<div class="clim-read" id="clim-read"><span><b id="cr-ka"></b> thousand years ago</span><span>Sea level <b id="cr-sl"></b></span><span>Arabia <b id="cr-h"></b></span></div>
+<img class="map" id="clim-img" alt="Habitat and dispersal frontier at the selected time">
+<div class="slider-row"><button id="clim-play" aria-label="Play">▶</button><input type="range" id="clim-range" min="0" step="1" aria-label="Time"></div>
+<div class="legend"><span><i class="sw" style="background:linear-gradient(90deg,#f6efe1,#7a5a2e)"></i>Habitat: poor → rich</span><span><i class="sw" style="background:#dbe7f1;border:1px solid var(--rule)"></i>Sea then</span><span>┈ coast today</span><span>━ reached in ≥50% of runs</span></div>
+<p style="font-size:14px;color:var(--text-secondary)">What to watch: around 80 ka, Arabia goes dark (Green Arabia) and the megafauna front pours across it. At 70 ka it goes pale again and stays that way through the lowest sea levels at 65 ka. That's when the coastal front keeps creeping along the exposed shelf while interior populations are cut off.</p>
+
+<h2>Results</h2>
+<h3>Time from leaving the Horn to reaching Sahul (thousand years)</h3>
+<div class="legend"><span><i class="sw" style="background:var(--text-secondary);opacity:.35"></i>10–90%</span><span><i class="sw" style="background:var(--text-secondary)"></i>25–75%</span><span>│ median</span></div>
+<div class="chart" id="c-transit"></div>
+<h3>Share of the route to Sahul that is underwater today</h3>
+<div class="chart" id="c-sunk"></div>
+<p style="font-size:14px;color:var(--text-secondary)">A cell counts as sunk only if most of its 37 km square is seabed today, so a narrow drowned beach strip is missed. The true figure for a shore-following route is higher.</p>
+
+<h3>Scorecard against the evidence</h3>
+<p>The share of runs consistent with each piece of evidence.</p>
+<table id="score">
+<thead><tr><th>Evidence test</th><th style="color:var(--s-coastal)">Coastal</th><th style="color:var(--s-terr)">Megafauna</th><th style="color:var(--s-mixed)">Mixed</th></tr></thead>
+<tbody></tbody></table>
+<p style="font-size:14px;color:var(--text-secondary)"><b>Long chronology:</b> exit 85–72 ka from the Horn. <b>Short chronology:</b> dispersal starts from the Near East after Neanderthal admixture (51–47 ka). The short chronology is hard for <i>every</i> strategy. Reaching Sahul by 45 ka needed front speeds above ~3.5 km/yr in almost all successful runs, i.e. a very fast expansion whichever way people moved.</p>
+
+<h2>What actually decides it</h2>
+<p>Head-to-head, coastal beats megafauna in <b><span id="v-win2"></span></b> of paired runs. That margin almost entirely comes down to one assumption: how productive the shore was compared with good savanna.</p>
+<h3>Coastal wins (%) by coastal productivity quartile</h3>
+<div class="chart" id="c-pdp1"></div>
+<h3>Coastal wins (%) by cost of re-learning each new biome</h3>
+<div class="chart" id="c-pdp2"></div>
+<p>When the shore is rich, coastal fresh water persists through droughts, and moving between biomes is costly, coastal wins in <b><span id="v-fav"></span></b> of runs. When the shore is poorer and biome changes are cheap, it wins only <b><span id="v-unf"></span></b>. Your "humans are lazy" intuition maps onto exactly this. The beach is one predictable, low-effort habitat stretching from Eritrea to Timor. The only questions are whether it really was as rich as the savanna, and whether there was drinking water on the Arabian and Makran coasts in dry phases.</p>
+
+
+<h2>Experiment: what does the evidence actually tell us?</h2>
+<p>I kept only the runs whose outcome matches all three long-chronology facts: Sulawesi by 67.8 ka, Sumatra by 63 ka, and interior Arabia occupied during the wet phase. Then I looked at what those surviving runs have in common. This is rejection-style approximate Bayesian inference.</p>
+<h3>Which strategy the evidence favours</h3>
+<div class="chart" id="c-post"></div>
+<h3>Share of runs matching the evidence, by front speed</h3>
+<div class="chart" id="c-vrate"></div>
+<h3>…and by exit date</h3>
+<div class="chart" id="c-trate"></div>
+<p><b>Three findings.</b> (1) The evidence needs <b>fast</b> movement: below ~1.5 km/yr almost nothing gets to Sulawesi in time, and the surviving runs centre on ~3 km/yr. (2) It needs an <b>early exit, during Green Arabia</b> (80–85 ka works far better than 72–75 ka). (3) It says <b>nothing about coastal productivity</b>, the one assumption that decides coast vs herds. That parameter's distribution in the surviving runs is unchanged from what went in (median <span id="x-cadv"></span> both before and after). The current dry-land record can't settle your question. Only drowned sites can. Among the runs that do fit the evidence, the coastal group still reaches Sahul before the megafauna group <b><span id="x-h2h"></span></b> of the time.</p>
+
+<h2>Experiment: where to look underwater</h2>
+<p>Taking the coastal and mixed routes, which cells did people pass through that are seabed today, and how deep?</p>
+<figure><img class="map" src="__MAP_DROWNED__" alt="Map of drowned route cells coloured by present depth">
+<div class="legend"><span><i class="sw" style="background:linear-gradient(90deg,#9ec5f0,#0d3a75)"></i>Depth today: 0 → 100 m</span><span>Bigger dot = more runs passed through</span></div>
+<figcaption>Present depth is the median over each 37 km cell. The beach itself sat at the lowstand line, 60–90 m down. The cells behind it, where people also camped, are shallower.</figcaption></figure>
+<table id="hot"><thead><tr><th>Region</th><th>Share of drowned route</th><th>Typical depth</th></tr></thead><tbody></tbody></table>
+<p style="font-size:14px;color:var(--text-secondary)">Half of the drowned route lies in under ~<span id="x-dmed"></span> m of water, which is diver and sub-bottom-sonar territory. The Bay of Bengal–Myanmar shelf, the Sunda shelf and the Gujarat–Indus shelf hold most of it. The Red Sea and south Arabian shelves are narrow enough that this 37 km grid misses them, so treat their small shares as an artefact, not a signal.</p>
+
+<h2>Verdict</h2>
+<p>The model supports a softened version of your view. A coastal track is the fastest and most climate-proof way to get from the Horn to Sahul, and it predicts the sparse record we actually see, because roughly half of it is now under 60–90 m of water. But "simply following the coast" is less likely than people using the coast as a highway while making inland excursions when rains opened up the interior. Megafauna hunting alone fits the interior Arabian sites but crosses the Arabian and Iranian deserts only in brief windows. The mixed strategy is the most likely in both chronologies.</p>
+<p><b>What would move the needle:</b> dated sites on the drowned shelves the model flags (Gujarat–Indus, Bay of Bengal–Myanmar, Sunda, plus the narrow Red Sea and south Arabian shelves this grid can't resolve), shell middens older than 60 ka between Yemen and India, and better estimates of how fast coastal foragers actually expand.</p>
+
+<details><summary>Caveats</summary>
+<p>This is a deliberately simple model. Biomes are hand-drawn boxes, softened at the edges, not a paleoclimate simulation. Humidity is a single index for the whole desert belt. Sea-level curve, humidity pulse dates and coastal productivity are approximations from the literature, sampled with wide uncertainty. The 20′ grid overstates strait widths, so the model subtracts ~25 km per crossing to compensate. There is no population size, Toba eruption, competition with Neanderthals or Denisovans, or multiple waves. Results describe the logic of the strategies, not a date for any event.</p>
+</details>
+
+<h2>Sources</h2>
+<ol class="src">
+<li>Beyer et al. 2021, climatic windows for out-of-Africa dispersal, Bab-el-Mandeb width 4–20+ km with sea level. <a href="https://doi.org/10.1038/s41467-021-24779-1">Nature Communications</a></li>
+<li>Nicholson et al. 2022, southern Arabian humid periods (~128–121, 104–97, 84–71 ka). <a href="https://eprints.soton.ac.uk/470011/1/1_s2.0_S0277379122000099_main.pdf">Quaternary Science Reviews</a></li>
+<li>Groucutt et al. 2021, five hominin expansions into the Nefud during green windows incl. MIS 5 and ~55 ka. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8443443">Nature</a></li>
+<li>Rose 2010, the Gulf Oasis: exposed Persian Gulf basin as refugium. <a href="https://www.birmingham.ac.uk/news-archive/2010/lost-civilization-under-persian-gulf">Current Anthropology (summary)</a></li>
+<li>Dobson et al. 2024, GIA sea levels: ~−65 m at 56.8 ka, −78 m at 51.7 ka, −100 m at 45 ka. <a href="https://comptes-rendus.academie-sciences.fr/geoscience/item/10.5802/crgeos.273.pdf">Comptes Rendus Géoscience</a></li>
+<li>Macaulay et al. 2005, rapid single coastal dispersal, 0.7–4 km/yr. <a href="https://eprints.hud.ac.uk/id/eprint/1194">Science</a></li>
+<li>Oktaviana et al. 2026, Sulawesi rock art ≥67,800 years. <a href="https://www.sciencedaily.com/releases/2026/03/260322020300.htm">Nature (summary)</a></li>
+<li>Iasi et al. 2024 and Sümer et al. 2025, Neanderthal admixture ~50.5–43.5 ka. <a href="https://www.mpg.de/23832006/1205-evan-new-timeline-for-neandertal-gene-flow-event-150495-x">MPI summary</a></li>
+<li>Allen & O'Connell 2025 vs Veth et al. 2025, short vs long Sahul chronology, Madjedbebe ~65 ka. <a href="https://www.livescience.com/archaeology/human-evolution/neanderthal-dna-may-refute-65-000-year-old-date-for-human-occupation-in-australia-but-not-all-experts-are-convinced">Live Science</a></li>
+<li>Groucutt et al. 2018 (Al Wusta, 95–86 ka) and Lida Ajer, Sumatra (68 ± 5 ka). <a href="https://www.deepdyve.com/lp/doc/hdPO0uBiUa">Nature Ecology & Evolution</a></li>
+<li>Relief: ETOPO 10′ (ice surface), via the PyVista vtk-data repository.</li>
+</ol>
+</div></div>
+
+<script>
+const S = __SUMMARY__;
+const MAPS = {coastal:"__MAP_coastal__", terrestrial:"__MAP_terrestrial__", mixed:"__MAP_mixed__"};
+const NAMES = {coastal:"Coastal", terrestrial:"Megafauna", mixed:"Mixed"};
+const VAR = {coastal:"--s-coastal", terrestrial:"--s-terr", mixed:"--s-mixed"};
+const css = v => getComputedStyle(document.querySelector('.viz-root')).getPropertyValue(v).trim();
+const pct = x => Math.round(x*100) + '%';
+document.querySelectorAll('[id^="v-"]').forEach(()=>{});
+document.getElementById('v-win').textContent = pct(S.win_overall);
+document.getElementById('v-win2').textContent = pct(S.win_overall);
+document.getElementById('v-delta').textContent = (Math.round(S.delta_med/100)*100).toLocaleString();
+document.getElementById('v-sunk-c').textContent = pct(S.sunk.coastal[2]);
+document.getElementById('v-sunk-t').textContent = pct(S.sunk.terrestrial[2]);
+document.getElementById('v-fav').textContent = pct(S.corners.fav[1]);
+document.getElementById('v-unf').textContent = pct(S.corners.unf[1]);
+
+// tabs
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-pressed', x===b));
+  document.getElementById('route-img').src = MAPS[b.dataset.s];
+}));
+
+// scorecard
+const rows = [
+ ['Reaches Sulawesi by 67.8 ka (Muna rock art)', 'sul', 'Long chronology'],
+ ['Reaches Sahul by 65 ka (Madjedbebe)', 'sah65', 'Long chronology'],
+ ['Reaches Sumatra by 63 ka (Lida Ajer)', 'lida', 'Long chronology'],
+ ['Occupies interior Arabia 85–70 ka (Nefud lakes)', 'nef', 'Long chronology'],
+ ['Sulawesi in time <i>and</i> interior Arabia', 'joint', 'Combined fit'],
+ ['Reaches Sahul by 45 ka', 'S45', 'Short chronology'],
+ ['Reaches Sahul by 43 ka', 'S43', 'Short chronology'],
+];
+const tb = document.querySelector('#score tbody');
+rows.forEach(([lab,key,grp]) => {
+  const tr = document.createElement('tr'); tr.dataset.key = key;
+  const td0 = document.createElement('td'); td0.innerHTML = lab + '<span class="k">' + grp + '</span>'; tr.appendChild(td0);
+  const vals = ['coastal','terrestrial','mixed'].map(s => S.evidence[s][key]);
+  const mx = Math.max(...vals);
+  vals.forEach(v => { const td = document.createElement('td'); td.textContent = (v*100).toFixed(v<0.1?1:0) + '%'; if (v===mx) td.className='best'; tr.appendChild(td); });
+  tb.appendChild(tr);
+});
+
+// ---------- tiny chart helpers ----------
+const NS='http://www.w3.org/2000/svg';
+function el(tag, attrs, parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+function tipFor(box){let t=box.querySelector('.tip');if(!t){t=document.createElement('div');t.className='tip';box.appendChild(t);}return t;}
+function showTip(box,html,x,y){const t=tipFor(box);t.innerHTML=html;t.style.opacity=1;const w=t.offsetWidth;const bw=box.clientWidth;t.style.left=Math.max(0,Math.min(bw-w,x-w/2))+'px';t.style.top=(y-t.offsetHeight-10)+'px';}
+function hideTip(box){tipFor(box).style.opacity=0;}
+
+function bandChart(id, key, ylab, fmt, yDomain, ticks){
+  const box=document.getElementById(id); box.innerHTML='';
+  const W=box.clientWidth||600, H=190, m={l:44,r:12,t:22,b:26};
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,height:H,role:'img','aria-label':ylab},box);
+  const ka=S.timeline.ka, lo=S.timeline[key][0], md=S.timeline[key][1], hi=S.timeline[key][2];
+  const x=v=>m.l+(100-v)/(100-35)*(W-m.l-m.r);
+  const y=v=>m.t+(yDomain[1]-v)/(yDomain[1]-yDomain[0])*(H-m.t-m.b);
+  // exit windows
+  el('rect',{x:x(85),y:m.t,width:x(72)-x(85),height:H-m.t-m.b,fill:css('--text-muted'),opacity:.10},svg);
+  el('text',{x:x(85)+4,y:m.t+12,class:'lbl'},svg).textContent='exit window (long)';
+  el('rect',{x:x(51),y:m.t,width:x(47)-x(51),height:H-m.t-m.b,fill:css('--text-muted'),opacity:.10},svg);
+  el('text',{x:x(51)+3,y:m.t+12,class:'lbl'},svg).textContent='short';
+  const ga=el('g',{class:'axis'},svg);
+  ticks.forEach(t=>{el('line',{x1:m.l,x2:W-m.r,y1:y(t),y2:y(t),class:'gridl'},ga);el('text',{x:m.l-6,y:y(t)+4,'text-anchor':'end'},ga).textContent=fmt(t);});
+  [100,90,80,70,60,50,40].forEach(t=>{el('text',{x:x(t),y:H-8,'text-anchor':'middle'},ga).textContent=t+' ka';});
+  el('text',{x:m.l,y:12,class:'lbl-strong'},svg).textContent=ylab;
+  let d='';ka.forEach((k,i)=>d+=(i?'L':'M')+x(k)+','+y(hi[i]));for(let i=ka.length-1;i>=0;i--)d+='L'+x(ka[i])+','+y(lo[i]);
+  el('path',{d:d+'Z',fill:css('--band'),opacity:.18},svg);
+  el('path',{d:ka.map((k,i)=>(i?'L':'M')+x(k)+','+y(md[i])).join(''),fill:'none',stroke:css('--band'),'stroke-width':2},svg);
+  const cross=el('line',{y1:m.t,y2:H-m.b,stroke:css('--text-secondary'),'stroke-width':1,opacity:0},svg);
+  const dot=el('circle',{r:4,fill:css('--band'),stroke:css('--surface-1'),'stroke-width':2,opacity:0},svg);
+  const hit=el('rect',{x:m.l,y:0,width:W-m.l-m.r,height:H,fill:'transparent'},svg);
+  const move=ev=>{const r=svg.getBoundingClientRect();const px=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left;const sx=px*W/r.width;
+    let i=Math.round((x(ka[0])-sx)/(x(ka[0])-x(ka[1])));i=Math.max(0,Math.min(ka.length-1,-i));
+    cross.setAttribute('x1',x(ka[i]));cross.setAttribute('x2',x(ka[i]));cross.setAttribute('opacity',.5);
+    dot.setAttribute('cx',x(ka[i]));dot.setAttribute('cy',y(md[i]));dot.setAttribute('opacity',1);
+    showTip(box,`<b>${ka[i]} ka</b><br>median ${fmt(md[i])}<br>range ${fmt(lo[i])} to ${fmt(hi[i])}`,x(ka[i])*r.width/W,y(md[i])*r.height/H);};
+  hit.addEventListener('mousemove',move);hit.addEventListener('touchstart',move,{passive:true});hit.addEventListener('touchmove',move,{passive:true});
+  hit.addEventListener('mouseleave',()=>{hideTip(box);cross.setAttribute('opacity',0);dot.setAttribute('opacity',0);});
+}
+
+function rangeChart(id, data, fmt, max, unit){
+  const box=document.getElementById(id); box.innerHTML='';
+  const W=box.clientWidth||600, row=40, m={l:84,r:20,t:6,b:24}, H=m.t+m.b+row*3;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,height:H},box);
+  const x=v=>m.l+v/max*(W-m.l-m.r);
+  const ga=el('g',{class:'axis'},svg);
+  const step=max/4; for(let t=0;t<=max+1e-9;t+=step){el('line',{x1:x(t),x2:x(t),y1:m.t,y2:H-m.b,class:'gridl'},ga);el('text',{x:x(t),y:H-6,'text-anchor':'middle'},ga).textContent=fmt(t);}
+  ['coastal','terrestrial','mixed'].forEach((s,i)=>{
+    const q=data[s], cy=m.t+row*i+row/2, c=css(VAR[s]);
+    el('text',{x:m.l-10,y:cy+4,'text-anchor':'end',class:'lbl-strong'},svg).textContent=NAMES[s];
+    el('rect',{x:x(q[0]),y:cy-3,width:x(q[4])-x(q[0]),height:6,rx:3,fill:c,opacity:.35},svg);
+    el('rect',{x:x(q[1]),y:cy-8,width:x(q[3])-x(q[1]),height:16,rx:4,fill:c},svg);
+    el('rect',{x:x(q[2])-1.5,y:cy-12,width:3,height:24,rx:1.5,fill:css('--text-primary'),stroke:css('--surface-1'),'stroke-width':1.5},svg);
+    el('text',{x:Math.min(x(q[4])+6,W-4),y:cy+4,class:'lbl','text-anchor':x(q[4])+40>W?'end':'start'},svg).textContent='';
+    const hit=el('rect',{x:m.l,y:cy-row/2,width:W-m.l-m.r,height:row,fill:'transparent'},svg);
+    const show=()=>{const r=svg.getBoundingClientRect();showTip(box,`<b>${NAMES[s]}</b><br>median ${fmt(q[2])}${unit}<br>middle half ${fmt(q[1])}–${fmt(q[3])}${unit}<br>10–90% ${fmt(q[0])}–${fmt(q[4])}${unit}`,x(q[2])*r.width/W,(cy-10)*r.height/H);};
+    hit.addEventListener('mousemove',show);hit.addEventListener('touchstart',show,{passive:true});hit.addEventListener('mouseleave',()=>hideTip(box));
+  });
+}
+
+function barChart(id, data, xlab, o={}){ const max=o.max||1;
+  const box=document.getElementById(id); box.innerHTML='';
+  const W=box.clientWidth||600, H=170, m={l:34,r:8,t:16,b:40};
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,height:H},box);
+  const n=data.length, bw=(W-m.l-m.r)/n, y=v=>m.t+(1-v/max)*(H-m.t-m.b);
+  const ga=el('g',{class:'axis'},svg);
+  [0,.25,.5,.75,1].map(f=>f*max).forEach(t=>{el('line',{x1:m.l,x2:W-m.r,y1:y(t),y2:y(t),class:'gridl'},ga);el('text',{x:m.l-6,y:y(t)+4,'text-anchor':'end'},ga).textContent=Math.round(t*100)+'%';});
+  if(!o.max)el('line',{x1:m.l,x2:W-m.r,y1:y(.5),y2:y(.5),stroke:css('--text-muted'),'stroke-dasharray':'3 3'},svg);
+  data.forEach((d,i)=>{
+    const bx=m.l+i*bw+bw*0.22, w=bw*0.56, top=y(d.win), base=y(0), r=4;
+    el('path',{d:`M${bx},${base}L${bx},${top+r}Q${bx},${top} ${bx+r},${top}L${bx+w-r},${top}Q${bx+w},${top} ${bx+w},${top+r}L${bx+w},${base}Z`,fill:d.color||css('--s-coastal')},svg);
+    el('text',{x:bx+w/2,y:top-5,'text-anchor':'middle',class:'lbl-strong'},svg).textContent=Math.round(d.win*100)+'%';
+    el('text',{x:bx+w/2,y:H-24,'text-anchor':'middle',class:'lbl'},svg).textContent=d.label;
+    el('text',{x:bx+w/2,y:H-10,'text-anchor':'middle',class:'lbl'},svg).textContent=d.range;
+    const hit=el('rect',{x:m.l+i*bw,y:m.t,width:bw,height:H-m.t-m.b,fill:'transparent'},svg);
+    const show=()=>{const rr=svg.getBoundingClientRect();showTip(box,o.tip?o.tip(d):`<b>${xlab} ${d.range}</b><br>coastal first in ${Math.round(d.win*100)}% of runs`,(bx+w/2)*rr.width/W,top*rr.height/H);};
+    hit.addEventListener('mousemove',show);hit.addEventListener('touchstart',show,{passive:true});hit.addEventListener('mouseleave',()=>hideTip(box));
+  });
+}
+
+function drawAll(){
+  bandChart('c-sl','sl','Sea level vs today (m)',v=>Math.round(v)+' m',[-105,-10],[-100,-75,-50,-25]);
+  bandChart('c-h','H','Arabian humidity index (0 = hyper-arid, 1 = Green Arabia)',v=>(+v).toFixed(2),[0,1],[0,.25,.5,.75,1]);
+  rangeChart('c-transit',S.transit,v=>(+v).toFixed(0),32,' kyr');
+  rangeChart('c-sunk',S.sunk,v=>Math.round(v*100)+'%',0.6,'');
+  barChart('c-pdp1',S.pdp.c_adv.map((d,i)=>({...d,label:['Poorest','Q2','Q3','Richest'][i]||'·'})),'Coastal productivity');
+  barChart('c-pdp2',S.pdp.biome_pen.map((d,i)=>({...d,range:Math.round(parseFloat(d.range))+'–'+Math.round(parseFloat(d.range.split('–')[1]))+' yr',label:['Cheapest','Q2','Q3','Costliest'][i]||'·'})),'Re-tooling cost');
+}
+drawAll();
+let rt; window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(drawAll,150);});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawAll);
+
+// ---- climate slider
+const CF = __FRAMES__;
+let cs='mixed', ci=0, timer=null;
+const rng=document.getElementById('clim-range'); rng.max=CF.meta.length-1;
+function cshow(){const m=CF.meta[ci];document.getElementById('clim-img').src=CF.frames[cs][ci];rng.value=ci;
+  document.getElementById('cr-ka').textContent=m.ka;document.getElementById('cr-sl').textContent=m.sl+' m';
+  document.getElementById('cr-h').textContent=m.H>0.5?'green (humid)':m.H>0.2?'semi-arid':'hyper-arid';}
+rng.addEventListener('input',()=>{ci=+rng.value;cshow();});
+document.querySelectorAll('#clim-tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#clim-tabs button').forEach(x=>x.setAttribute('aria-pressed',x===b));cs=b.dataset.s;cshow();}));
+document.getElementById('clim-play').addEventListener('click',e=>{const btn=e.currentTarget;if(timer){clearInterval(timer);timer=null;btn.textContent='▶';return;}
+  if(ci>=CF.meta.length-1)ci=0;btn.textContent='❚❚';timer=setInterval(()=>{ci++;if(ci>=CF.meta.length){ci=CF.meta.length-1;clearInterval(timer);timer=null;btn.textContent='▶';}cshow();},800);});
+cshow();
+// ---- experiments
+const E = __EXP__;
+document.getElementById('x-cadv').textContent=E.abc.c_adv.prior[1].toFixed(2)+'×';
+document.getElementById('x-h2h').textContent=Math.round(E.h2h_given_evidence*100)+'%';
+document.getElementById('x-dmed').textContent=Math.round(E.drowned_depth[2]);
+const ht=document.querySelector('#hot tbody');
+E.hotspots.filter(h=>h.share>=0.005).forEach(h=>{const tr=document.createElement('tr');[h.region,Math.round(h.share*100)+'%',h.depth_med+' m'].forEach((v,i)=>{const td=document.createElement('td');td.textContent=v;tr.appendChild(td);});ht.appendChild(tr);});
+function drawExp(){
+  barChart('c-post',['coastal','terrestrial','mixed'].map(s=>({win:E.post_strategy[s],label:NAMES[s],range:'',color:css(VAR[s])})),'Posterior',{tip:d=>`<b>${d.label}</b><br>${Math.round(d.win*100)}% of evidence-matching runs`,max:0.6});
+  const ed=E.vhist.edges;
+  barChart('c-vrate',E.vhist.rate.map((r,i)=>({win:r,label:ed[i].toFixed(1)+'–',range:ed[i+1].toFixed(1)})),'',{tip:d=>`<b>${d.label}${d.range} km/yr</b><br>${Math.round(d.win*100)}% of runs match the evidence`});
+  barChart('c-trate',E.t0rate.map(d=>({win:d.rate,label:'Exit',range:d.bin+' ka'})),'',{tip:d=>`<b>Exit ${d.range}</b><br>${Math.round(d.win*100)}% of runs match the evidence`});
+}
+drawExp();
+window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(drawExp,160);});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawExp);
+</script>
+</body>
+</html>
