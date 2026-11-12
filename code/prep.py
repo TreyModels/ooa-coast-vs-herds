@@ -2,7 +2,7 @@
 import numpy as np
 from scipy import ndimage
 
-g = np.load('/home/claude/work/etopo10.npy')            # rows: lat 90 -> -90 step 1/6
+g = np.load('etopo10.npy')            # rows: lat 90 -> -90 step 1/6
 lat10 = 90 - np.arange(g.shape[0]) / 6
 lon10 = -180 + np.arange(g.shape[1]) / 6
 
@@ -20,5 +20,6 @@ zmed = np.median(blk.reshape(ny, 2, nx, 2).transpose(0, 2, 1, 3).reshape(ny, nx,
 lat = lat10[r[0]] - (np.arange(ny) * 2 + 0.5) / 6
 lon = lon10[c[0]] + (np.arange(nx) * 2 + 0.5) / 6
 zmin = blk.min(axis=(1, 3))
-np.savez('/home/claude/work/grid.npz', zmin=zmin, zmax=zmax, zmed=zmed, lat=lat, lon=lon)
+import os
+np.savez(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'grid.npz'), zmin=zmin, zmax=zmax, zmed=zmed, lat=lat, lon=lon)
 print(ny, nx, lat[[0, -1]], lon[[0, -1]])

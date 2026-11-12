@@ -2,7 +2,7 @@
 import numpy as np, sys, os, time, model as M
 from multiprocessing import Pool
 
-C = np.load('/home/claude/work/cross.npz'); X = (C['ptr'], C['idx'], C['w'])
+C = np.load('cross.npz'); X = (C['ptr'], C['idx'], C['w'])
 STRATS = ['coastal', 'terrestrial', 'mixed']
 PRESENT_WATER = M.water_mask(0.0).ravel()
 SAHUL = (((M.LON2 >= 131.5) & (M.LAT2 <= 0)) | ((M.LAT2 <= -11.2) & (M.LON2 >= 121))).ravel()
@@ -70,11 +70,11 @@ if __name__ == '__main__':
         res = pool.map(one, jobs, chunksize=4)
     print('done', time.time() - t)
     import pandas as pd
-    df = pd.DataFrame([r[0] for r in res]); df.to_pickle('/home/claude/work/mc.pkl')
+    df = pd.DataFrame([r[0] for r in res]); df.to_pickle('mc.pkl')
     dens = {}
     for (sc, i), (_, routes) in zip(jobs, res):
         for k, v in routes.items():
             key = f'{sc}|{k}'
             if key not in dens: dens[key] = np.zeros(M.N, np.int32)
             dens[key][v] += 1
-    np.savez_compressed('/home/claude/work/density.npz', n=n, **dens)
+    np.savez_compressed('density.npz', n=n, **dens)

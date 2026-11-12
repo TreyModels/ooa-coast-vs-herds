@@ -14,7 +14,13 @@ Time-dependent least-cost dispersal model comparing three foraging strategies
 
 ## Re-running
 Python 3 with numpy, scipy, pandas, matplotlib, numba, pillow (and pyvista only to rebuild the grid).
-Scripts use absolute paths under `/home/claude/work/`; change those to your folder first.
+Run every script from an empty working folder next to `code/`, for example:
+
+    mkdir work && cd work
+    python ../code/build.py
+    python ../code/mc.py 400
+
+Outputs (`cross.npz`, `mc.pkl`, `density.npz`, figures) are written to that folder; the grid is read from `data/`.
 
 1. `prep.py` – builds `grid.npz` from ETOPO (needs `etopo10.npy`; regenerate from pyvista/vtk-data `Data/EarthModels/ETOPO_10min_Ice.vtp`). Skip it and use the included grid.
 2. `build.py` – precomputes sea-crossing edges per sea-level bin → `cross.npz` (~6 s).

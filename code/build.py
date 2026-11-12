@@ -1,6 +1,6 @@
 import numpy as np, time, model as M
 t=time.time(); X=M.build_crossings(); print('edges',len(X[1]), time.time()-t)
-np.savez('/home/claude/work/cross.npz', ptr=X[0], idx=X[1], w=X[2])
+np.savez('cross.npz', ptr=X[0], idx=X[1], w=X[2])
 # sanity: key straits at -80 m
 w=M.water_mask(-80.0)
 def gap(name, la0,lo0,la1,lo1):
