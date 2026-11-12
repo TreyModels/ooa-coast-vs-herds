@@ -34,3 +34,7 @@ Sea-level curve (approximate composite, ±8 m, ±1.5 kyr); Saharo-Arabian humidi
 hand-drawn biome zones with river corridors and the exposed Gulf basin; front speed 0.7–6 km/yr;
 coastal productivity 0.7–1.2× best savanna; dry-phase coastal fresh water; biome re-tooling cost 0–1,500 yr;
 sea crossings with waiting time w0·exp(width/λ). This is a model of the logic of each strategy, not a date for any event.
+
+## Attribution and reuse
+
+Credit and cite **Dr. Trey Menefee** when using, reproducing, sharing, or adapting his material. Noncommercial use is permitted under the conditions in [LICENSE](LICENSE); commercial use requires prior permission. Third-party materials retain their own terms.
