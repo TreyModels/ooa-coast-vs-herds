@@ -9,11 +9,10 @@ Time-dependent least-cost (earliest-arrival) model on a 20' paleo-landscape:
   * sea gaps are crossed with an expected waiting time that grows with gap width
 Monte Carlo draws every uncertain parameter; strategies are compared on identical draws.
 """
-import numpy as np, heapq
+import numpy as np, heapq, os
 from scipy import ndimage
 import numba as nb
 
-import os
 G = np.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'grid.npz'))
 ZMAX, ZMED, ZMIN, LAT, LON = G['zmax'], G['zmed'], G['zmin'], G['lat'], G['lon']
 NY, NX = ZMAX.shape
@@ -22,7 +21,7 @@ LAT2, LON2 = np.meshgrid(LAT, LON, indexing='ij')
 CELL_KM = 111.32 / 3
 
 # ---------------------------------------------------------------- time axis
-T_START, T_END, DT = 100_000, 35_000, 1000          # years BP
+T_START, T_END, DT = 100_000, int(os.environ.get('OOA_T_END', 35_000)), 1000          # years BP
 K = (T_START - T_END) // DT + 1
 T_K = T_START - np.arange(K) * DT                    # BP at start of slice k
 
@@ -32,8 +31,8 @@ def tau_to_bp(tau): return T_START - tau
 # ---------------------------------------------------------------- sea level (m), approximate composite
 # Shape follows Red Sea / global RSL reconstructions (Grant et al. 2014; Spratt & Lisiecki 2016);
 # MC adds an offset and a time jitter.
-SL_KA = np.array([100, 95, 90, 85, 80, 76, 72, 68, 64, 60, 57, 54, 51, 48, 45, 40, 35])
-SL_M  = np.array([-25, -40, -50, -30, -25, -40, -60, -80, -88, -80, -65, -72, -78, -75, -85, -80, -85])
+SL_KA = np.array([100, 95, 90, 85, 80, 76, 72, 68, 64, 60, 57, 54, 51, 48, 45, 40, 35, 30, 25])
+SL_M  = np.array([-25, -40, -50, -30, -25, -40, -60, -80, -88, -80, -65, -72, -78, -75, -85, -80, -85, -90, -115])
 
 def sea_level(bp, offset=0.0, jitter=0.0):
     return np.interp((bp + jitter) / 1000, SL_KA[::-1], SL_M[::-1]) + offset

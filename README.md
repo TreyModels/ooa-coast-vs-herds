@@ -1,5 +1,7 @@
 # Coast or herds? Out-of-Africa dispersal model
 
+**Start here:** `FINDINGS.md` (what we found) · `HANDOFF.md` (next-phase assignment, incl. fetching the Timmermann/IBS climate–habitat data) · `coast-or-herds.html` (full write-up with maps and charts).
+
 Time-dependent least-cost dispersal model comparing three foraging strategies
 (coastal, megafauna/terrestrial, mixed) from the Horn of Africa to Sahul, 100–35 ka.
 
@@ -34,6 +36,17 @@ Sea-level curve (approximate composite, ±8 m, ±1.5 kyr); Saharo-Arabian humidi
 hand-drawn biome zones with river corridors and the exposed Gulf basin; front speed 0.7–6 km/yr;
 coastal productivity 0.7–1.2× best savanna; dry-phase coastal fresh water; biome re-tooling cost 0–1,500 yr;
 sea crossings with waiting time w0·exp(width/λ). This is a model of the logic of each strategy, not a date for any event.
+
+## Genetics layer
+- `genetics.py` – 150 runs per strategy of the main wave (ancestors of living non-Africans) spreading from the Persian-Plateau hub, 50–46 ka start, to 25 ka (it sets `OOA_T_END=25000` itself). Saves colonisation paths and front widths to `wave2.pkl`.
+- `gen_analyze.py` – split times and tree topology between reference populations, serial-founder drift (Σ 1/front width along the founding path), and ghost ancestry picked up from an earlier wave (`arr_L.npy`, from `frames.py`) → `results/gen.json`.
+
+## Homo erectus layer
+- `erectus.py N` – 2.6 → 0.1 Ma on the same engine (5-kyr steps), 3 strategies × 3 sea-crossing abilities (walk / rare rafting / dugout canoes), two sea-level histories (classic vs Clark et al. 2025). Scored against 10 dated sites and 4 never-reached areas → `erectus.pkl`, `erectus_reach.npz`.
+- `er_analyze.py` → `results/er.json`; `er_map.py` → `figures/map_erectus.png`; per-run results in `results/erectus_runs.csv`.
+- `climate_inputs.py` – fetch + regrid hook for the Timmermann et al. 2022 CESM habitat layers. Set `ERECTUS_HABITAT=path.nc` (and `ERECTUS_HABITAT_VAR`) to run `erectus.py` on them instead of the hand-drawn biomes. `python ../code/climate_inputs.py` runs a self-test on synthetic data.
+
+Full run order from an empty `work/` folder: `build.py` → `mc.py 400` → `figs.py` → `frames.py` → `climate_frames.py` → `exp.py` → `genetics.py` → `gen_analyze.py` → `erectus.py 400` → `er_analyze.py` → `er_map.py`.
 
 ## Attribution and reuse
 

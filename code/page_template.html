@@ -56,7 +56,6 @@ details{margin:10px 0}summary{cursor:pointer;color:var(--text-secondary);font-si
 </style>
 </head>
 <body>
-<aside style="padding:12px 18px;background:#f3f2ee;color:#202020;font:14px/1.5 system-ui,sans-serif;text-align:center">© 2026 Dr. Trey Menefee. Credit and cite Dr. Trey Menefee when using or reproducing this work. Noncommercial use only; commercial use requires prior permission. Third-party terms may apply. <a href="https://github.com/TreyModels">Request permission</a>.</aside>
 <div class="viz-root"><div class="wrap">
 
 <h1>Coast or herds? A Monte Carlo test of the route out of Africa</h1>
@@ -69,6 +68,8 @@ details{margin:10px 0}summary{cursor:pointer;color:var(--text-secondary);font-si
 <li><b>Your "the sites are sunk" point is real and measurable.</b> A median <b><span id="v-sunk-c"></span></b> of the coastal route is now underwater, vs <span id="v-sunk-t"></span> for the inland route, and this grid undercounts it.</li>
 <li><b>Pure beachcombing loses on fit to the evidence.</b> Humans were in interior Arabia (the Nefud lakes, ~95–55 ka), and a coast-only population rarely gets there. The best-fitting model is a <b>mixed forager</b>: coast-anchored, but pushing up rivers and into green inland basins when rain allowed.</li>
 <li><b>The current evidence can't break the tie.</b> Fitting the model to the known sites pins down speed (~3 km/yr) and an early exit (~80 ka, in a wet phase), but not how rich the coast was. Drowned sites, mostly in 10–50 m of water, are the test.</li>
+<li><b>The DNA side fits a coast-anchored spread.</b> Papuans branch as sisters to East Asians in 94–100% of coastal and mixed runs, against ~55% for the megafauna strategy. Any earlier wave, such as whoever made the 67,800-year-old Sulawesi art, must have nearly vanished, or Papuans would carry far more than the ≤2% of its DNA genomes allow.</li>
+<li><b><i>Homo erectus</i> wasn't a beachcomber, and didn't paddle.</b> Its oldest sites are inland and northern, which coast-bound runs usually miss. Its islands (Sulawesi, Flores, Luzon) need sea crossings, but canoes would have put it in Australia too. Rare accidental rafting fits best.</li>
 <li><b>The deciding assumption is coastal productivity.</b> If the shore was at least ~85% as rich as the best savanna, the coastal route wins almost every time. Below that, it doesn't.</li>
 </ul>
 </div>
@@ -162,6 +163,45 @@ details{margin:10px 0}summary{cursor:pointer;color:var(--text-secondary);font-si
 <table id="hot"><thead><tr><th>Region</th><th>Share of drowned route</th><th>Typical depth</th></tr></thead><tbody></tbody></table>
 <p style="font-size:14px;color:var(--text-secondary)">Half of the drowned route lies in under ~<span id="x-dmed"></span> m of water, which is diver and sub-bottom-sonar territory. The Bay of Bengal–Myanmar shelf, the Sunda shelf and the Gujarat–Indus shelf hold most of it. The Red Sea and south Arabian shelves are narrow enough that this 37 km grid misses them, so treat their small shares as an artefact, not a signal.</p>
 
+
+<h2>What it means for the DNA we see today</h2>
+<p>Next I put a genetics layer on the dispersal runs. The ancestors of everyone living outside Africa spread from a hub on the Persian Plateau after the shared Neanderthal mixing (start 50–46 ka, ending 25 ka). I ran each strategy 150 times and traced who founded whom. That tree gives three predictions that genomes can check: <b>branching order</b>, <b>diversity loss</b> along the route, and how much DNA would be picked up from an <b>earlier wave</b> already living there.</p>
+
+<h3>1 · Branching order</h3>
+<table id="topo"><thead><tr><th>Predicted tree</th><th style="color:var(--s-coastal)">Coastal</th><th style="color:var(--s-terr)">Megafauna</th><th style="color:var(--s-mixed)">Mixed</th></tr></thead><tbody></tbody></table>
+<p>Genomes put Papuans and Australians <i>inside</i> the East Eurasian branch, as a clade with East Asians, after a first east/west split. South Indian hunter-gatherer ancestry, the Andamanese, Papuans and East Asians all branch off within a short span. Every strategy gets the east/west split first (median <span id="g-ew"></span> ka vs <span id="g-ee"></span> ka for the eastern splits). Every strategy also produces a near-star: the eastern branches all split within a median <span id="g-star"></span> thousand years of each other. But only the coast-anchored strategies reliably make <b>Papuans and East Asians sisters</b>, because both descend from the same Southeast Asian shoreline population. Moving overland, East Asia is just as often reached from India via the north.</p>
+
+<h3>2 · Diversity loss along the route</h3>
+<div class="legend"><span><i class="sw" style="background:var(--s-coastal)"></i>Coastal</span><span><i class="sw" style="background:var(--s-terr)"></i>Megafauna</span><span><i class="sw" style="background:var(--s-mixed)"></i>Mixed</span></div>
+<div class="chart" id="c-het"></div>
+<p style="font-size:14px;color:var(--text-secondary)">Heterozygosity relative to the hub. Each founding step loses diversity in proportion to how narrow the advancing front was. All three strategies reproduce the observed pattern, with diversity falling from west to east and lowest in New Guinea and Australia. A coastline is a one-dimensional corridor, so the coastal front is thin and drift bites roughly twice as hard. That shows up as a steeper gradient, but its absolute size depends on group sizes I can't pin down, so on its own this can't separate the strategies. The scale is set so mixed-strategy Papuans lose 15%.</p>
+
+<h3>3 · The ghost of an earlier wave</h3>
+<p>Suppose the people behind the 67,800-year-old Sulawesi art, and any other pre-60 ka groups, were modern humans from an earlier wave still living along the route. The later wave would then walk through their land all the way to New Guinea. In the median run, Papuan ancestors cross <b><span id="g-cells"></span></b> of earlier-wave territory. Each stretch they pass through mixes in a little local DNA, and that adds up.</p>
+<div class="legend"><span><i class="sw" style="background:var(--s-coastal)"></i>Later wave coastal</span><span><i class="sw" style="background:var(--s-terr)"></i>Megafauna</span><span><i class="sw" style="background:var(--s-mixed)"></i>Mixed</span><span>┈ 2% (highest published estimate)</span></div>
+<div class="chart" id="c-ghost"></div>
+<p>Genomes allow at most about 2% of Papuan DNA from an earlier wave (Pagani et al. 2016), and other teams found none. Staying under 2% requires less than about <b>1 interbreeding in <span id="g-mstar"></span> per 37-km stretch</b> of shared land. Modern humans clearly mixed with Neanderthals, so neighbouring groups of their own species almost certainly mixed more than that. So the early wave must have been <b>gone or nearly gone by ~50 ka</b> along the southern route, or it wasn't made of our ancestors' kind of human. One suggestion is that the earliest Sahul and Wallacea signs could be Denisovans. This holds whichever strategy each wave used.</p>
+<p class="note"><b>What ancient DNA would need to show if your coastal model is right:</b> (1) Genomes from drowned or coastal sites between India and Sunda, if any survive, should sit on the Papuan–East Asian branch, with drift increasing step by step along the coastline. (2) Inland Paleolithic lineages, such as the ghost lineage in Tibet or Tianyuan in north China, should turn out to be later offshoots of coastal populations, not older parallel branches. (3) Any Sahul or Sulawesi genome older than 50 ka would either be a dead-end lineage or not <i>Homo sapiens</i>. Tropical heat destroys DNA, so such genomes may never be recovered, but (1) and (2) are testable.</p>
+
+
+<h2>Homo erectus: the same test 2 million years earlier</h2>
+<p>I ran the same engine for the first humans to leave Africa: start 2.6–2.25 million years ago, run to 100,000 years ago, 400 draws. Each draw uses three foraging strategies and three sea-crossing abilities: <b>walking only</b>, <b>rare accidental rafting</b> (floating vegetation, storm or tsunami debris, once every tens to hundreds of thousands of years) and <b>dugout canoes</b> (deliberate crossings, same ability as the <i>sapiens</i> runs). Sea level follows two histories, 50/50: the classic one with shallower early ice ages, and Clark et al. 2025, where early lowstands were as deep as the last ice age. That choice barely changed anything. Each version is scored against ten places <i>erectus</i>-grade humans are found by a given date, and three places they never reached before modern humans.</p>
+
+<h3>Coast or inland? Mixed strategy, rafting</h3>
+<table id="er-strat"><thead><tr><th>Test</th><th style="color:var(--s-coastal)">Coastal</th><th style="color:var(--s-terr)">Megafauna</th><th style="color:var(--s-mixed)">Mixed</th></tr></thead><tbody></tbody></table>
+<p>For <i>erectus</i>, a coast-bound population usually arrives too late at the oldest sites, Shangchen on the Loess Plateau (2.1 Ma) and Dmanisi in the Caucasus (1.85 Ma), which are inland and far north. Inland and mixed foragers hit them every time. <b>The earliest humans out of Africa weren't beachcombers.</b> That makes the coastal habit of the <i>sapiens</i> runs look like something new, not the default.</p>
+
+<h3>Boats or not? Mixed strategy</h3>
+<table id="er-cross"><thead><tr><th>Test</th><th>Walk only</th><th>Rare rafting</th><th>Dugout canoes</th></tr></thead><tbody></tbody></table>
+<figure><img class="map" src="__MAP_ERECTUS__" alt="Where rafting and canoes add reach beyond walking">
+<div class="legend"><span><i class="sw" style="background:#6250d6"></i>Rafting adds (beyond walking)</span><span><i class="sw" style="background:#e34948"></i>Canoes add (beyond rafting)</span><span>● found · ✕ never found</span></div>
+<figcaption>Coloured where at least 20% of runs reach the cell. Rafting explains Luzon and some of Sulawesi. Canoes also deliver Sulawesi and Flores, but they pour people into New Guinea and Australia almost at once.</figcaption></figure>
+<p><b>Walking alone can't explain the record.</b> Sulawesi (≥1.04 Ma), Flores (1.02 Ma) and Luzon (0.71 Ma) are never reached, so something crossed water. <b>Dugout canoes overshoot.</b> They reach the islands, but in <span id="er-sahul"></span> of runs they also reach New Guinea or Australia, usually within a few thousand years of leaving Africa. Neither has any trace of humans before <i>sapiens</i>. Canoes reach the Andamans in <span id="er-and"></span> of runs, which are also empty of earlier humans. <b>Only rare, accidental crossings fit both sides</b>: the islands that were reached, and Sahul, which wasn't.</p>
+<h3>Runs that fit everything, by how often a lucky crossing happens</h3>
+<div class="chart" id="c-raft"></div>
+<p>The sweet spot is roughly one successful rafting event per <span id="er-w0"></span> thousand years at a short gap. That's often enough to hit Wallacea and the Philippines over a million years, and rare enough never to make the 90 km jump from Timor to Australia. The wide water of Wallace's Line worked as a filter, not a wall.</p>
+<p class="note">Japan is left out of the score. At glacial lowstands the model lets <i>erectus</i> walk in via Korea, and no accepted pre-modern site exists there. Either that land bridge never fully opened, which is debated, or the record is missing. As with the <i>sapiens</i> runs, these are hand-drawn biomes and approximate dates. Read it for logic, not precise ages.</p>
+
 <h2>Verdict</h2>
 <p>The model supports a softened version of your view. A coastal track is the fastest and most climate-proof way to get from the Horn to Sahul, and it predicts the sparse record we actually see, because roughly half of it is now under 60–90 m of water. But "simply following the coast" is less likely than people using the coast as a highway while making inland excursions when rains opened up the interior. Megafauna hunting alone fits the interior Arabian sites but crosses the Arabian and Iranian deserts only in brief windows. The mixed strategy is the most likely in both chronologies.</p>
 <p><b>What would move the needle:</b> dated sites on the drowned shelves the model flags (Gujarat–Indus, Bay of Bengal–Myanmar, Sunda, plus the narrow Red Sea and south Arabian shelves this grid can't resolve), shell middens older than 60 ka between Yemen and India, and better estimates of how fast coastal foragers actually expand.</p>
@@ -182,6 +222,15 @@ details{margin:10px 0}summary{cursor:pointer;color:var(--text-secondary);font-si
 <li>Iasi et al. 2024 and Sümer et al. 2025, Neanderthal admixture ~50.5–43.5 ka. <a href="https://www.mpg.de/23832006/1205-evan-new-timeline-for-neandertal-gene-flow-event-150495-x">MPI summary</a></li>
 <li>Allen & O'Connell 2025 vs Veth et al. 2025, short vs long Sahul chronology, Madjedbebe ~65 ka. <a href="https://www.livescience.com/archaeology/human-evolution/neanderthal-dna-may-refute-65-000-year-old-date-for-human-occupation-in-australia-but-not-all-experts-are-convinced">Live Science</a></li>
 <li>Groucutt et al. 2018 (Al Wusta, 95–86 ka) and Lida Ajer, Sumatra (68 ± 5 ka). <a href="https://www.deepdyve.com/lp/doc/hdPO0uBiUa">Nature Ecology & Evolution</a></li>
+<li>Pagani et al. 2016, ≥2% early-wave ancestry in Papuans; Mallick et al. and Malaspinas et al. 2016 found little or none. <a href="https://www.heritagedaily.com/2016/09/genetic-trace-in-papuan-genomes-suggests-two-expansions-out-of-africa/112700">summary</a></li>
+<li>Vallini et al. 2024, Persian Plateau as the post-exit hub. <a href="https://doi.org/10.1038/s41467-024-46161-7">Nature Communications</a></li>
+<li>Lipson & Reich 2017, primary east/west split with Australasians nested in the eastern clade. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5400393">MBE</a></li>
+<li>Ramachandran et al. 2005 and DeGiorgio et al. 2009, serial founder effect. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2752555">PNAS</a></li>
+<li>Reyes-Centeno et al. 2014, genetic and cranial support for an early southern route. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4034217">PNAS</a></li>
+<li>Zhu et al. 2018, Shangchen artefacts from ~2.12 Ma; Ferring et al. 2011, Dmanisi 1.85–1.78 Ma. <a href="https://carta.anthropogeny.org/node/316859">Nature</a></li>
+<li>Hakim et al. 2025, hominins on Sulawesi by ≥1.04 Ma (Calio). <a href="https://sciencedaily.com/releases/2025/09/250910000305.htm">Nature (summary)</a></li>
+<li>Ingicco et al. 2018, Kalinga, Luzon, 709 ka. <a href="https://phys.org/news/2018-05-early-humans-philippines-years.pdf">Nature (summary)</a></li>
+<li>Clark et al. 2025, global sea level over 4.5 Myr: large early-Pleistocene lowstands. <a href="https://www.reading.ac.uk/news/2025/Research-News/Sea-levels-saw-large-fluctuations-throughout-last-ice-age">Science (summary)</a></li>
 <li>Relief: ETOPO 10′ (ice surface), via the PyVista vtk-data repository.</li>
 </ol>
 </div></div>
@@ -346,6 +395,74 @@ function drawExp(){
 drawExp();
 window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(drawExp,160);});
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawExp);
+
+// ---- genetics
+const G = __GEN__;
+const tb2=document.querySelector('#topo tbody');
+[['(PNG,China),India','Papuans + East Asians, then S India'],['(PNG,India),China','Papuans + S India, then East Asians'],['(China,India),PNG','East Asians + S India, then Papuans']].forEach(([k,lab])=>{
+  const tr=document.createElement('tr');const td0=document.createElement('td');td0.textContent=lab;tr.appendChild(td0);
+  const vals=['coastal','terrestrial','mixed'].map(s=>G.topology[s][k]);const mx=Math.max(...vals);
+  vals.forEach(v=>{const td=document.createElement('td');td.textContent=Math.round(v*100)+'%';if(v===mx&&v>0)td.className='best';tr.appendChild(td);});tb2.appendChild(tr);});
+document.getElementById('g-ew').textContent=G.splits.mixed['Levant (West Eurasian side) | New Guinea (Papuans)'][1];
+document.getElementById('g-ee').textContent=G.splits.mixed['New Guinea (Papuans) | North China (Tianyuan)'][1]+'–'+G.splits.mixed['New Guinea (Papuans) | South India (AASI)'][1];
+document.getElementById('g-star').textContent=G.star.mixed[1]+'–'+G.star.terrestrial[1];
+const gc=['coastal>terrestrial','coastal>coastal'].map(k=>G.ghost_cells[k]['New Guinea (Papuans)']);
+document.getElementById('g-cells').textContent=gc[0]+'–'+gc[1]+' cells (about '+(Math.round(gc[0]*37/100)*100).toLocaleString()+'–'+(Math.round(gc[1]*37/100)*100).toLocaleString()+' km)';
+const ms=Object.values(G.m_star).filter(x=>x);document.getElementById('g-mstar').textContent=(Math.round(1/Math.max(...ms)/1000)*1000).toLocaleString()+'–'+(Math.round(1/Math.min(...ms)/1000)*1000).toLocaleString();
+
+function dotChart(id){
+  const box=document.getElementById(id);box.innerHTML='';
+  const pops=Object.keys(G.H_rel.mixed);const W=box.clientWidth||600,row=30,m={l:150,r:14,t:6,b:26},H=m.t+m.b+row*pops.length;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,height:H},box);const lo=0.7,hi=1.0;const x=v=>m.l+(v-lo)/(hi-lo)*(W-m.l-m.r);
+  const ga=el('g',{class:'axis'},svg);[0.7,0.8,0.9,1.0].forEach(t=>{el('line',{x1:x(t),x2:x(t),y1:m.t,y2:H-m.b,class:'gridl'},ga);el('text',{x:x(t),y:H-8,'text-anchor':'middle'},ga).textContent=Math.round(t*100)+'%';});
+  pops.forEach((p,i)=>{const cy=m.t+row*i+row/2;el('text',{x:m.l-8,y:cy+4,'text-anchor':'end',class:'lbl'},svg).textContent=p.replace(' (West Eurasian side)','').replace(/ \(.*\)/,(s)=>s);
+    const vs=['coastal','terrestrial','mixed'].map(s=>G.H_rel[s][p]);el('line',{x1:x(Math.min(...vs)),x2:x(Math.max(...vs)),y1:cy,y2:cy,stroke:css('--rule'),'stroke-width':2},svg);
+    ['coastal','terrestrial','mixed'].forEach(s=>el('circle',{cx:x(G.H_rel[s][p]),cy:cy,r:5,fill:css(VAR[s]),stroke:css('--surface-1'),'stroke-width':2},svg));
+    const hit=el('rect',{x:0,y:cy-row/2,width:W,height:row,fill:'transparent'},svg);
+    const show=()=>{const r=svg.getBoundingClientRect();showTip(box,`<b>${p}</b><br>`+['coastal','terrestrial','mixed'].map(s=>`${NAMES[s]} ${Math.round(G.H_rel[s][p]*100)}%`).join('<br>'),x(vs[2])*r.width/W,(cy-6)*r.height/H);};
+    hit.addEventListener('mousemove',show);hit.addEventListener('touchstart',show,{passive:true});hit.addEventListener('mouseleave',()=>hideTip(box));});
+}
+function ghostChart(id){
+  const box=document.getElementById(id);box.innerHTML='';
+  const W=box.clientWidth||600,H=220,m={l:40,r:14,t:12,b:40};const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,height:H},box);
+  const mm=['0.0001','0.0003','0.001','0.003'];const lx=v=>Math.log10(v);const x=v=>m.l+(lx(v)-lx(1e-4))/(lx(3e-3)-lx(1e-4))*(W-m.l-m.r);const y=v=>m.t+(1-v/70)*(H-m.t-m.b);
+  const ga=el('g',{class:'axis'},svg);[0,20,40,60].forEach(t=>{el('line',{x1:m.l,x2:W-m.r,y1:y(t),y2:y(t),class:'gridl'},ga);el('text',{x:m.l-6,y:y(t)+4,'text-anchor':'end'},ga).textContent=t+'%';});
+  const lab={'0.0001':'1 in 10,000','0.0003':'1 in 3,300','0.001':'1 in 1,000','0.003':'1 in 330'};
+  mm.forEach(v=>{el('text',{x:x(+v),y:H-22,'text-anchor':'middle'},ga).textContent=lab[v];});
+  el('text',{x:(m.l+W-m.r)/2,y:H-6,'text-anchor':'middle',class:'lbl'},svg).textContent='interbreeding per 37-km stretch of shared land';
+  el('line',{x1:m.l,x2:W-m.r,y1:y(2),y2:y(2),stroke:css('--text-secondary'),'stroke-dasharray':'4 3'},svg);
+  ['coastal','terrestrial','mixed'].forEach(s=>{const g=G.ghost['coastal>'+s]['New Guinea (Papuans)'];
+    el('path',{d:mm.map((v,i)=>(i?'L':'M')+x(+v)+','+y(g[v])).join(''),fill:'none',stroke:css(VAR[s]),'stroke-width':2},svg);
+    mm.forEach(v=>{const c=el('circle',{cx:x(+v),cy:y(g[v]),r:5,fill:css(VAR[s]),stroke:css('--surface-1'),'stroke-width':2},svg);
+      const hit=el('circle',{cx:x(+v),cy:y(g[v]),r:14,fill:'transparent'},svg);
+      const show=()=>{const r=svg.getBoundingClientRect();showTip(box,`<b>Later wave: ${NAMES[s]}</b><br>${lab[v]} → ${g[v].toFixed(1)}% early-wave DNA in Papuans`,x(+v)*r.width/W,y(g[v])*r.height/H);};
+      hit.addEventListener('mousemove',show);hit.addEventListener('touchstart',show,{passive:true});hit.addEventListener('mouseleave',()=>hideTip(box));});});
+}
+function drawGen(){dotChart('c-het');ghostChart('c-ghost');}
+drawGen();window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(drawGen,170);});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawGen);
+
+// ---- erectus
+const ER = __ER__;
+const MAIN=Object.keys(ER.table['mixed|raft']).filter(k=>!k.startsWith('_')&&!k.startsWith('NOT'));
+function erRow(tb,lab,vals){const tr=document.createElement('tr');const td0=document.createElement('td');td0.innerHTML=lab;tr.appendChild(td0);const mx=Math.max(...vals);
+  vals.forEach(v=>{const td=document.createElement('td');td.textContent=Math.round(v*100)+'%';if(v===mx&&v>0)td.className='best';tr.appendChild(td);});tb.appendChild(tr);}
+const tS=document.querySelector('#er-strat tbody');
+erRow(tS,'Shangchen by 2.12 Ma',['coastal','terrestrial','mixed'].map(s=>ER.table[s+'|raft']['Shangchen, Loess Plateau (2.1 Ma)']));
+erRow(tS,'Dmanisi by 1.85 Ma',['coastal','terrestrial','mixed'].map(s=>ER.table[s+'|raft']['Dmanisi, Georgia (1.85 Ma)']));
+erRow(tS,'All 7 mainland sites on time',['coastal','terrestrial','mixed'].map(s=>ER.table[s+'|raft']._mainland_all));
+erRow(tS,'Fits the whole record<span class="k">all 10 sites, none in Sahul, Andamans or Socotra</span>',['coastal','terrestrial','mixed'].map(s=>ER.fit[s+'|raft'].both));
+const tC=document.querySelector('#er-cross tbody');
+erRow(tC,'All 7 mainland sites on time',['walk','raft','canoe'].map(c=>ER.table['mixed|'+c]._mainland_all));
+erRow(tC,'Sulawesi, Flores and Luzon on time',['walk','raft','canoe'].map(c=>ER.table['mixed|'+c]._islands_all));
+erRow(tC,'Stays out of Sahul, Andamans, Socotra',['walk','raft','canoe'].map(c=>ER.fit['mixed|'+c].absent));
+erRow(tC,'Fits the whole record',['walk','raft','canoe'].map(c=>ER.fit['mixed|'+c].both));
+document.getElementById('er-sahul').textContent=Math.round((1-ER.table['mixed|canoe']['NOT Sahul (New Guinea + Australia)'])*100)+'%';
+document.getElementById('er-and').textContent=Math.round((1-ER.table['mixed|canoe']['NOT Andaman Islands'])*100)+'%';
+document.getElementById('er-w0').textContent='50–170';
+function drawEr(){barChart('c-raft',ER.raft_w0.map(d=>({win:d.both,label:'1 per',range:d.bin.replace('k',' kyr')})),'',{max:0.4,tip:d=>`<b>One crossing per ${d.range}</b><br>${Math.round(d.win*100)}% of runs reach the islands and miss Sahul`});}
+drawEr();window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(drawEr,180);});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawEr);
 </script>
 </body>
 </html>

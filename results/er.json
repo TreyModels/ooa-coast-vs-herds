@@ -1,0 +1,326 @@
+{
+ "n": 400,
+ "table": {
+  "coastal|walk": {
+   "Shangchen, Loess Plateau (2.1 Ma)": 0.705,
+   "Dmanisi, Georgia (1.85 Ma)": 0.355,
+   "Yuanmou, S China (1.7 Ma)": 0.595,
+   "Nihewan, N China (1.66 Ma)": 0.792,
+   "Sangiran, Java (1.5 Ma)": 0.948,
+   "Attirampakkam, India (1.5 Ma)": 0.948,
+   "Ubeidiya, Levant (1.4 Ma)": 0.693,
+   "Calio, Sulawesi (1.04 Ma)": 0.0,
+   "Wolo Sege, Flores (1.02 Ma)": 0.0,
+   "Kalinga, Luzon (0.71 Ma)": 0.0,
+   "NOT Sahul (New Guinea + Australia)": 1.0,
+   "NOT Andaman Islands": 1.0,
+   "NOT Socotra": 1.0,
+   "NOT Japan (Honshu)": 0.18,
+   "_mainland_all": 0.323,
+   "_islands_all": 0.0,
+   "_absent_all": 0.18,
+   "_everything": 0.0
+  },
+  "coastal|raft": {
+   "Shangchen, Loess Plateau (2.1 Ma)": 0.708,
+   "Dmanisi, Georgia (1.85 Ma)": 0.367,
+   "Yuanmou, S China (1.7 Ma)": 0.6,
+   "Nihewan, N China (1.66 Ma)": 0.797,
+   "Sangiran, Java (1.5 Ma)": 0.963,
+   "Attirampakkam, India (1.5 Ma)": 0.963,
+   "Ubeidiya, Levant (1.4 Ma)": 0.698,
+   "Calio, Sulawesi (1.04 Ma)": 0.48,
+   "Wolo Sege, Flores (1.02 Ma)": 0.743,
+   "Kalinga, Luzon (0.71 Ma)": 0.96,
+   "NOT Sahul (New Guinea + Australia)": 0.667,
+   "NOT Andaman Islands": 0.745,
+   "NOT Socotra": 0.877,
+   "NOT Japan (Honshu)": 0.085,
+   "_mainland_all": 0.333,
+   "_islands_all": 0.455,
+   "_absent_all": 0.068,
+   "_everything": 0.0
+  },
+  "coastal|canoe": {
+   "Shangchen, Loess Plateau (2.1 Ma)": 0.743,
+   "Dmanisi, Georgia (1.85 Ma)": 0.372,
+   "Yuanmou, S China (1.7 Ma)": 0.61,
+   "Nihewan, N China (1.66 Ma)": 0.812,
+   "Sangiran, Java (1.5 Ma)": 0.97,
+   "Attirampakkam, India (1.5 Ma)": 0.97,
+   "Ubeidiya, Levant (1.4 Ma)": 0.705,
+   "Calio, Sulawesi (1.04 Ma)": 0.833,
+   "Wolo Sege, Flores (1.02 Ma)": 0.96,
+   "Kalinga, Luzon (0.71 Ma)": 0.97,
+   "NOT Sahul (New Guinea + Australia)": 0.147,
+   "NOT Andaman Islands": 0.198,
+   "NOT Socotra": 0.535,
+   "NOT Japan (Honshu)": 0.035,
+   "_mainland_all": 0.328,
+   "_islands_all": 0.833,
+   "_absent_all": 0.025,
+   "_everything": 0.0
+  },
+  "terrestrial|walk": {
+   "Shangchen, Loess Plateau (2.1 Ma)": 0.99,
+   "Dmanisi, Georgia (1.85 Ma)": 1.0,
+   "Yuanmou, S China (1.7 Ma)": 1.0,
+   "Nihewan, N China (1.66 Ma)": 1.0,
+   "Sangiran, Java (1.5 Ma)": 1.0,
+   "Attirampakkam, India (1.5 Ma)": 1.0,
+   "Ubeidiya, Levant (1.4 Ma)": 1.0,
+   "Calio, Sulawesi (1.04 Ma)": 0.0,
+   "Wolo Sege, Flores (1.02 Ma)": 0.0,
+   "Kalinga, Luzon (0.71 Ma)": 0.0,
+   "NOT Sahul (New Guinea + Australia)": 1.0,
+   "NOT Andaman Islands": 1.0,
+   "NOT Socotra": 1.0,
+   "NOT Japan (Honshu)": 0.11,
+   "_mainland_all": 0.99,
+   "_islands_all": 0.0,
+   "_absent_all": 0.11,
+   "_everything": 0.0
+  },
+  "terrestrial|raft": {
+   "Shangchen, Loess Plateau (2.1 Ma)": 0.99,
+   "Dmanisi, Georgia (1.85 Ma)": 1.0,
+   "Yuanmou, S China (1.7 Ma)": 1.0,
+   "Nihewan, N China (1.66 Ma)": 1.0,
+   "Sangiran, Java (1.5 Ma)": 1.0,
+   "Attirampakkam, India (1.5 Ma)": 1.0,
+   "Ubeidiya, Levant (1.4 Ma)": 1.0,
+   "Calio, Sulawesi (1.04 Ma)": 0.497,
+   "Wolo Sege, Flores (1.02 Ma)": 0.765,
+   "Kalinga, Luzon (0.71 Ma)": 0.995,
+   "NOT Sahul (New Guinea + Australia)": 0.65,
+   "NOT Andaman Islands": 0.757,
+   "NOT Socotra": 0.88,
+   "NOT Japan (Honshu)": 0.035,
+   "_mainland_all": 0.99,
+   "_islands_all": 0.47,
+   "_absent_all": 0.028,
+   "_everything": 0.005
+  },
+  "terrestrial|canoe": {
+   "Shangchen, Loess Plateau (2.1 Ma)": 0.998,
+   "Dmanisi, Georgia (1.85 Ma)": 1.0,
+   "Yuanmou, S China (1.7 Ma)": 1.0,
+   "Nihewan, N China (1.66 Ma)": 1.0,
+   "Sangiran, Java (1.5 Ma)": 1.0,
+   "Attirampakkam, India (1.5 Ma)": 1.0,
+   "Ubeidiya, Levant (1.4 Ma)": 1.0,
+   "Calio, Sulawesi (1.04 Ma)": 0.86,
+   "Wolo Sege, Flores (1.02 Ma)": 0.998,
+   "Kalinga, Luzon (0.71 Ma)": 1.0,
+   "NOT Sahul (New Guinea + Australia)": 0.14,
+   "NOT Andaman Islands": 0.163,
+   "NOT Socotra": 0.537,
+   "NOT Japan (Honshu)": 0.005,
+   "_mainland_all": 0.998,
+   "_islands_all": 0.86,
+   "_absent_all": 0.0,
+   "_everything": 0.0
+  },
+  "mixed|walk": {
+   "Shangchen, Loess Plateau (2.1 Ma)": 0.998,
+   "Dmanisi, Georgia (1.85 Ma)": 1.0,
+   "Yuanmou, S China (1.7 Ma)": 1.0,
+   "Nihewan, N China (1.66 Ma)": 1.0,
+   "Sangiran, Java (1.5 Ma)": 1.0,
+   "Attirampakkam, India (1.5 Ma)": 1.0,
+   "Ubeidiya, Levant (1.4 Ma)": 1.0,
+   "Calio, Sulawesi (1.04 Ma)": 0.0,
+   "Wolo Sege, Flores (1.02 Ma)": 0.0,
+   "Kalinga, Luzon (0.71 Ma)": 0.0,
+   "NOT Sahul (New Guinea + Australia)": 1.0,
+   "NOT Andaman Islands": 1.0,
+   "NOT Socotra": 1.0,
+   "NOT Japan (Honshu)": 0.107,
+   "_mainland_all": 0.998,
+   "_islands_all": 0.0,
+   "_absent_all": 0.107,
+   "_everything": 0.0
+  },
+  "mixed|raft": {
+   "Shangchen, Loess Plateau (2.1 Ma)": 0.998,
+   "Dmanisi, Georgia (1.85 Ma)": 1.0,
+   "Yuanmou, S China (1.7 Ma)": 1.0,
+   "Nihewan, N China (1.66 Ma)": 1.0,
+   "Sangiran, Java (1.5 Ma)": 1.0,
+   "Attirampakkam, India (1.5 Ma)": 1.0,
+   "Ubeidiya, Levant (1.4 Ma)": 1.0,
+   "Calio, Sulawesi (1.04 Ma)": 0.5,
+   "Wolo Sege, Flores (1.02 Ma)": 0.772,
+   "Kalinga, Luzon (0.71 Ma)": 0.99,
+   "NOT Sahul (New Guinea + Australia)": 0.655,
+   "NOT Andaman Islands": 0.725,
+   "NOT Socotra": 0.877,
+   "NOT Japan (Honshu)": 0.025,
+   "_mainland_all": 0.998,
+   "_islands_all": 0.472,
+   "_absent_all": 0.018,
+   "_everything": 0.0
+  },
+  "mixed|canoe": {
+   "Shangchen, Loess Plateau (2.1 Ma)": 1.0,
+   "Dmanisi, Georgia (1.85 Ma)": 1.0,
+   "Yuanmou, S China (1.7 Ma)": 1.0,
+   "Nihewan, N China (1.66 Ma)": 1.0,
+   "Sangiran, Java (1.5 Ma)": 1.0,
+   "Attirampakkam, India (1.5 Ma)": 1.0,
+   "Ubeidiya, Levant (1.4 Ma)": 1.0,
+   "Calio, Sulawesi (1.04 Ma)": 0.858,
+   "Wolo Sege, Flores (1.02 Ma)": 0.99,
+   "Kalinga, Luzon (0.71 Ma)": 1.0,
+   "NOT Sahul (New Guinea + Australia)": 0.14,
+   "NOT Andaman Islands": 0.177,
+   "NOT Socotra": 0.535,
+   "NOT Japan (Honshu)": 0.003,
+   "_mainland_all": 1.0,
+   "_islands_all": 0.858,
+   "_absent_all": 0.0,
+   "_everything": 0.0
+  }
+ },
+ "lag_shangchen": {
+  "coastal": [
+   21,
+   61,
+   183
+  ],
+  "terrestrial": [
+   16,
+   46,
+   136
+  ],
+  "mixed": [
+   11,
+   34,
+   109
+  ]
+ },
+ "lag_dmanisi": {
+  "coastal": [
+   9,
+   34,
+   79
+  ],
+  "terrestrial": [
+   6,
+   19,
+   55
+  ],
+  "mixed": [
+   5,
+   15,
+   43
+  ]
+ },
+ "canoe_first": {
+  "Sahul (New Guinea + Australia)": {
+   "p": 0.86,
+   "median_ka": 2358
+  },
+  "Andaman Islands": {
+   "p": 0.823,
+   "median_ka": 2359
+  },
+  "Socotra": {
+   "p": 0.465,
+   "median_ka": 2337
+  },
+  "Japan (Honshu)": {
+   "p": 0.998,
+   "median_ka": 2365
+  }
+ },
+ "sl_sens": {
+  "clark25": {
+   "Calio, Sulawesi (1.04 Ma)": 0.495,
+   "Wolo Sege, Flores (1.02 Ma)": 0.737,
+   "Kalinga, Luzon (0.71 Ma)": 0.99
+  },
+  "classic": {
+   "Calio, Sulawesi (1.04 Ma)": 0.505,
+   "Wolo Sege, Flores (1.02 Ma)": 0.807,
+   "Kalinga, Luzon (0.71 Ma)": 0.99
+  }
+ },
+ "sl_sens_sahul": {
+  "clark25": 0.646,
+  "classic": 0.663
+ },
+ "raft_w0": [
+  {
+   "bin": "20\u201350k",
+   "islands": 0.67,
+   "no_sahul": 0.34,
+   "both": 0.04
+  },
+  {
+   "bin": "50\u2013100k",
+   "islands": 0.61,
+   "no_sahul": 0.55,
+   "both": 0.19
+  },
+  {
+   "bin": "100\u2013200k",
+   "islands": 0.31,
+   "no_sahul": 0.98,
+   "both": 0.29
+  },
+  {
+   "bin": "200\u2013300k",
+   "islands": 0.07,
+   "no_sahul": 1.0,
+   "both": 0.07
+  }
+ ],
+ "fit": {
+  "coastal|walk": {
+   "present": 0.0,
+   "absent": 1.0,
+   "both": 0.0
+  },
+  "coastal|raft": {
+   "present": 0.14,
+   "absent": 0.45,
+   "both": 0.022
+  },
+  "coastal|canoe": {
+   "present": 0.295,
+   "absent": 0.035,
+   "both": 0.0
+  },
+  "terrestrial|walk": {
+   "present": 0.0,
+   "absent": 1.0,
+   "both": 0.0
+  },
+  "terrestrial|raft": {
+   "present": 0.465,
+   "absent": 0.445,
+   "both": 0.102
+  },
+  "terrestrial|canoe": {
+   "present": 0.858,
+   "absent": 0.01,
+   "both": 0.0
+  },
+  "mixed|walk": {
+   "present": 0.0,
+   "absent": 1.0,
+   "both": 0.0
+  },
+  "mixed|raft": {
+   "present": 0.472,
+   "absent": 0.44,
+   "both": 0.095
+  },
+  "mixed|canoe": {
+   "present": 0.858,
+   "absent": 0.01,
+   "both": 0.0
+  }
+ }
+}
