@@ -188,8 +188,9 @@ def speed_surfaces(p, strategy, noise):
             s = np.where(coast, sC, p['inland_frac'] * sT)
         elif strategy == 'terrestrial':
             s = sT
-        else:  # mixed generalist
-            s = np.where(coast, np.maximum(sC, sT), sT)
+        else:  # mixed generalist = max of the two pure surfaces, times a peak-efficiency factor (review item 1)
+            # c_mix = 0 (default) reproduces the original model exactly; c_mix > 0 makes the generalist pay for flexibility
+            s = (1.0 - p.get('c_mix', 0.0)) * np.where(coast, np.maximum(sC, sT), sT)
         s = s * noise
         s = np.where(land & (s >= 0.12), s, 0.0)
         sp[k] = (p['v_max'] * s).ravel(); coastk[k] = coast.ravel()
@@ -197,7 +198,7 @@ def speed_surfaces(p, strategy, noise):
 
 # ---------------------------------------------------------------- time-dependent Dijkstra (numba)
 @nb.njit(cache=True)
-def _dijkstra(speed, coastk, biome, scode, pen, nbr_d, offs, ny, nx, seeds, tau0, slbin, cptr, cidx, cw, lam, w0, dmax, dt, tau_max):
+def _dijkstra(speed, coastk, biome, scode, pen, nbr_d, offs, ny, nx, seeds, tau0, slbin, cptr, cidx, cw, lam, w0, dmax, dt, tau_max, wait_k):
     Kk, Nn = speed.shape
     arr = np.full(Nn, np.inf); pred = np.full(Nn, -1, np.int64); via_sea = np.zeros(Nn, np.bool_)
     heap = [(0.0, np.int64(0))]; heap.pop()
@@ -232,8 +233,9 @@ def _dijkstra(speed, coastk, biome, scode, pen, nbr_d, offs, ny, nx, seeds, tau0
                         heapq.heappush(heap, (na, v))
                     break
                 k += 1
-        b = slbin[k0]
         if speed[k0, u] > 0:
+            # candidate 1: cross now, at the sea level of the departure slice (original behaviour)
+            b = slbin[k0]
             for q in range(cptr[b, u], cptr[b, u + 1]):
                 v = cidx[q]; w = cw[q]
                 if w > dmax or speed[k0, v] <= 0: continue
@@ -241,15 +243,32 @@ def _dijkstra(speed, coastk, biome, scode, pen, nbr_d, offs, ny, nx, seeds, tau0
                 if na < arr[v]:
                     arr[v] = na; pred[v] = u; via_sea[v] = True
                     heapq.heappush(heap, (na, v))
+            # candidate 2 (review item 2): wait up to wait_k slices while the population survives at u,
+            # then cross at the lowest sea level found in that window (earliest slice on ties)
+            if wait_k > 0:
+                kd = k0
+                for k in range(k0 + 1, min(k0 + wait_k, Kk - 1) + 1):
+                    if speed[k, u] <= 0: break
+                    if slbin[k] < slbin[kd]: kd = k
+                if kd > k0:
+                    b2 = slbin[kd]; dep = kd * dt
+                    for q in range(cptr[b2, u], cptr[b2, u + 1]):
+                        v = cidx[q]; w = cw[q]
+                        if w > dmax or speed[kd, v] <= 0: continue
+                        na = dep + w0 * np.exp(w / lam)
+                        if na < arr[v]:
+                            arr[v] = na; pred[v] = u; via_sea[v] = True
+                            heapq.heappush(heap, (na, v))
     return arr, pred, via_sea
 
 def run(p, strategy, seeds, t0_bp, noise, X, tau_max_bp=T_END):
     sp, coastk = speed_surfaces(p, strategy, noise)
     scode = {'coastal': 0, 'terrestrial': 1, 'mixed': 2}[strategy]
     slb = np.array([np.argmin(np.abs(SL_BINS - sea_level(T_K[k], p['sl_off'], p['sl_jit']))) for k in range(K)])
+    wait_k = int(round(p.get('wait_kyr', 0) * 1000 / DT))     # review item 2: max wait at a coast, in slices
     arr, pred, via = _dijkstra(sp, coastk, BIOME.ravel(), scode, float(p['biome_pen']), NBR_D, OFFS, NY, NX, np.asarray(seeds, np.int64), float(bp_to_tau(t0_bp)),
                                slb, X[0], X[1], X[2], p['lam'], p['w0'], p['dmax'], float(DT),
-                               float(bp_to_tau(tau_max_bp)))
+                               float(bp_to_tau(tau_max_bp)), wait_k)
     return tau_to_bp(arr), pred, via
 
 # ---------------------------------------------------------------- parameter sampler

@@ -1,5 +1,5 @@
 """Paired Monte Carlo: same parameter draw + same noise field for every strategy."""
-import numpy as np, sys, os, time, model as M
+import numpy as np, sys, os, time, argparse, model as M
 from multiprocessing import Pool
 
 C = np.load('cross.npz'); X = (C['ptr'], C['idx'], C['w'])
@@ -31,10 +31,12 @@ def route(pred, end):
         path.append(u); u = pred[u]
     return np.array(path)
 
+CFG = dict(c_mix=0.0, wait_kyr=0.0)     # review switches; defaults = original model
+
 def one(args):
-    scen, i = args
+    scen, i, cfg = args          # cfg passed explicitly (spawn-safe on macOS)
     rng = np.random.default_rng(10_000 * (scen == 'S') + i)
-    p = M.sample_params(rng)
+    p = {**M.sample_params(rng), **cfg}
     noise = M.noise_field(rng)
     if scen == 'L':
         t0 = rng.uniform(72_000, 85_000); seeds = HORN
@@ -63,18 +65,26 @@ def one(args):
     return out, routes
 
 if __name__ == '__main__':
-    n = int(sys.argv[1]) if len(sys.argv) > 1 else 50
-    jobs = [(sc, i) for sc in ['L', 'S'] for i in range(n)]
+    ap = argparse.ArgumentParser()
+    ap.add_argument('n', type=int, nargs='?', default=50)
+    ap.add_argument('--c-mix', type=float, default=0.0, help='mixed peak-efficiency penalty (review item 1)')
+    ap.add_argument('--wait', type=float, default=0.0, help='max coastal wait in kyr for lowest sea level (review item 2)')
+    ap.add_argument('--tag', default='old')
+    a = ap.parse_args()
+    n = a.n
+    CFG.update(c_mix=a.c_mix, wait_kyr=a.wait)
+    print('config', CFG, 'tag', a.tag, flush=True)
+    jobs = [(sc, i, dict(CFG)) for sc in ['L', 'S'] for i in range(n)]
     t = time.time()
     with Pool(os.cpu_count()) as pool:
         res = pool.map(one, jobs, chunksize=4)
     print('done', time.time() - t)
     import pandas as pd
-    df = pd.DataFrame([r[0] for r in res]); df.to_pickle('mc.pkl')
+    df = pd.DataFrame([r[0] for r in res]); df.to_pickle(f'mc_{a.tag}.pkl')
     dens = {}
-    for (sc, i), (_, routes) in zip(jobs, res):
+    for (sc, i, _c), (_, routes) in zip(jobs, res):
         for k, v in routes.items():
             key = f'{sc}|{k}'
             if key not in dens: dens[key] = np.zeros(M.N, np.int32)
             dens[key][v] += 1
-    np.savez_compressed('density.npz', n=n, **dens)
+    np.savez_compressed(f'density_{a.tag}.npz', n=n, **dens)
