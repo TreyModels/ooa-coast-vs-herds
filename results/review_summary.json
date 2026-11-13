@@ -1,0 +1,2706 @@
+{
+ "c0.05_w0": {
+  "n": 800,
+  "P(mixed earliest at Sahul)": 0.789,
+  "P(coastal earlier than terrestrial)": 0.466,
+  "Sahul arrival ka, median by strategy": {
+   "coastal": 60.5,
+   "terrestrial": 58.4,
+   "mixed": 59.2
+  },
+  "abc": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.51,
+     3.19,
+     5.47
+    ],
+    "coastal": [
+     1.71,
+     3.27,
+     5.45
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.39,
+     2.95,
+     5.38
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.51,
+     80.04,
+     83.87
+    ],
+    "coastal": [
+     75.77,
+     79.97,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     75.03,
+     80.01,
+     83.85
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "coastal": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.99,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.1,
+     0.38,
+     0.61
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.12,
+     0.37,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     792.65,
+     1372.27
+    ],
+    "coastal": [
+     111.99,
+     792.65,
+     1336.48
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     114.98,
+     801.93,
+     1373.7
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.46,
+     31.41,
+     42.1
+    ],
+    "coastal": [
+     20.83,
+     31.67,
+     42.34
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.29,
+     31.4,
+     41.43
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.12,
+     68.24,
+     308.67
+    ],
+    "coastal": [
+     24.37,
+     68.24,
+     307.35
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     27.0,
+     76.61,
+     314.51
+    ]
+   }
+  },
+  "post_strategy": {
+   "coastal": 0.237,
+   "terrestrial": 0.339,
+   "mixed": 0.424
+  },
+  "hotspots": [
+   {
+    "region": "Bay of Bengal & Myanmar",
+    "score": 40.251,
+    "share": 0.4,
+    "depth_med": 27,
+    "shallow": 0.76,
+    "shelf_km2_above_120m": 335941,
+    "score_per_1000km2_shelf": 0.11982
+   },
+   {
+    "region": "Sunda shelf (Malaya, Sumatra, Java)",
+    "score": 20.53,
+    "share": 0.204,
+    "depth_med": 22,
+    "shallow": 0.71,
+    "shelf_km2_above_120m": 1602868,
+    "score_per_1000km2_shelf": 0.01281
+   },
+   {
+    "region": "W India shelf (Gujarat\u2013Kerala)",
+    "score": 16.559,
+    "share": 0.165,
+    "depth_med": 32,
+    "shallow": 0.79,
+    "shelf_km2_above_120m": 245022,
+    "score_per_1000km2_shelf": 0.06758
+   },
+   {
+    "region": "Makran & Indus delta",
+    "score": 13.357,
+    "share": 0.133,
+    "depth_med": 22,
+    "shallow": 0.95,
+    "shelf_km2_above_120m": 64208,
+    "score_per_1000km2_shelf": 0.20804
+   },
+   {
+    "region": "Oman & Persian Gulf",
+    "score": 5.219,
+    "share": 0.052,
+    "depth_med": 14,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 290639,
+    "score_per_1000km2_shelf": 0.01796
+   },
+   {
+    "region": "Sri Lanka & Palk Strait",
+    "score": 2.506,
+    "share": 0.025,
+    "depth_med": 10,
+    "shallow": 0.97,
+    "shelf_km2_above_120m": 47587,
+    "score_per_1000km2_shelf": 0.05267
+   },
+   {
+    "region": "Gulf of Aden & S Arabia",
+    "score": 0.749,
+    "share": 0.007,
+    "depth_med": 10,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 30948,
+    "score_per_1000km2_shelf": 0.02419
+   },
+   {
+    "region": "Red Sea & Bab-el-Mandeb",
+    "score": 0.642,
+    "share": 0.006,
+    "depth_med": 18,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 183811,
+    "score_per_1000km2_shelf": 0.0035
+   },
+   {
+    "region": "Sahul shelf",
+    "score": 0.168,
+    "share": 0.002,
+    "depth_med": 85,
+    "shallow": 0.0,
+    "shelf_km2_above_120m": 939527,
+    "score_per_1000km2_shelf": 0.00018
+   }
+  ]
+ },
+ "c0.1_w0": {
+  "n": 800,
+  "P(mixed earliest at Sahul)": 0.738,
+  "P(coastal earlier than terrestrial)": 0.466,
+  "Sahul arrival ka, median by strategy": {
+   "coastal": 60.5,
+   "terrestrial": 58.4,
+   "mixed": 59.5
+  },
+  "abc": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.62,
+     3.24,
+     5.5
+    ],
+    "coastal": [
+     1.71,
+     3.27,
+     5.45
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.46,
+     3.1,
+     5.46
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.51,
+     80.04,
+     83.87
+    ],
+    "coastal": [
+     75.77,
+     79.97,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     75.03,
+     80.01,
+     83.85
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "coastal": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.99,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.1,
+     0.38,
+     0.61
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.12,
+     0.38,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     777.25,
+     1372.27
+    ],
+    "coastal": [
+     111.99,
+     792.65,
+     1336.48
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     114.98,
+     780.67,
+     1373.7
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.45,
+     31.38,
+     42.1
+    ],
+    "coastal": [
+     20.83,
+     31.67,
+     42.34
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.25,
+     31.18,
+     41.66
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.12,
+     66.6,
+     308.67
+    ],
+    "coastal": [
+     24.37,
+     68.24,
+     307.35
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     27.0,
+     71.38,
+     321.93
+    ]
+   }
+  },
+  "post_strategy": {
+   "coastal": 0.241,
+   "terrestrial": 0.345,
+   "mixed": 0.414
+  },
+  "hotspots": [
+   {
+    "region": "Bay of Bengal & Myanmar",
+    "score": 40.489,
+    "share": 0.402,
+    "depth_med": 28,
+    "shallow": 0.76,
+    "shelf_km2_above_120m": 335941,
+    "score_per_1000km2_shelf": 0.12052
+   },
+   {
+    "region": "Sunda shelf (Malaya, Sumatra, Java)",
+    "score": 20.602,
+    "share": 0.204,
+    "depth_med": 23,
+    "shallow": 0.71,
+    "shelf_km2_above_120m": 1602868,
+    "score_per_1000km2_shelf": 0.01285
+   },
+   {
+    "region": "W India shelf (Gujarat\u2013Kerala)",
+    "score": 16.605,
+    "share": 0.165,
+    "depth_med": 32,
+    "shallow": 0.78,
+    "shelf_km2_above_120m": 245022,
+    "score_per_1000km2_shelf": 0.06777
+   },
+   {
+    "region": "Makran & Indus delta",
+    "score": 13.375,
+    "share": 0.133,
+    "depth_med": 22,
+    "shallow": 0.95,
+    "shelf_km2_above_120m": 64208,
+    "score_per_1000km2_shelf": 0.20831
+   },
+   {
+    "region": "Oman & Persian Gulf",
+    "score": 5.161,
+    "share": 0.051,
+    "depth_med": 14,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 290639,
+    "score_per_1000km2_shelf": 0.01776
+   },
+   {
+    "region": "Sri Lanka & Palk Strait",
+    "score": 2.506,
+    "share": 0.025,
+    "depth_med": 10,
+    "shallow": 0.97,
+    "shelf_km2_above_120m": 47587,
+    "score_per_1000km2_shelf": 0.05267
+   },
+   {
+    "region": "Gulf of Aden & S Arabia",
+    "score": 0.754,
+    "share": 0.007,
+    "depth_med": 10,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 30948,
+    "score_per_1000km2_shelf": 0.02436
+   },
+   {
+    "region": "Red Sea & Bab-el-Mandeb",
+    "score": 0.64,
+    "share": 0.006,
+    "depth_med": 18,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 183811,
+    "score_per_1000km2_shelf": 0.00348
+   },
+   {
+    "region": "Sahul shelf",
+    "score": 0.168,
+    "share": 0.002,
+    "depth_med": 85,
+    "shallow": 0.0,
+    "shelf_km2_above_120m": 939527,
+    "score_per_1000km2_shelf": 0.00018
+   }
+  ]
+ },
+ "c0.1_w5": {
+  "n": 800,
+  "P(mixed earliest at Sahul)": 0.741,
+  "P(coastal earlier than terrestrial)": 0.463,
+  "Sahul arrival ka, median by strategy": {
+   "coastal": 60.5,
+   "terrestrial": 58.4,
+   "mixed": 59.5
+  },
+  "abc": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.62,
+     3.24,
+     5.5
+    ],
+    "coastal": [
+     1.71,
+     3.27,
+     5.45
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.46,
+     3.1,
+     5.46
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.51,
+     80.04,
+     83.87
+    ],
+    "coastal": [
+     75.77,
+     79.97,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     75.03,
+     80.01,
+     83.85
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "coastal": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.99,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.1,
+     0.38,
+     0.61
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.12,
+     0.38,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     777.25,
+     1372.27
+    ],
+    "coastal": [
+     111.99,
+     792.65,
+     1336.48
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     114.98,
+     780.67,
+     1373.7
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.45,
+     31.38,
+     42.1
+    ],
+    "coastal": [
+     20.83,
+     31.67,
+     42.34
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.25,
+     31.18,
+     41.66
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.12,
+     66.6,
+     308.67
+    ],
+    "coastal": [
+     24.37,
+     68.24,
+     307.35
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     27.0,
+     71.38,
+     321.93
+    ]
+   }
+  },
+  "post_strategy": {
+   "coastal": 0.241,
+   "terrestrial": 0.345,
+   "mixed": 0.414
+  },
+  "hotspots": [
+   {
+    "region": "Bay of Bengal & Myanmar",
+    "score": 40.487,
+    "share": 0.402,
+    "depth_med": 28,
+    "shallow": 0.76,
+    "shelf_km2_above_120m": 335941,
+    "score_per_1000km2_shelf": 0.12052
+   },
+   {
+    "region": "Sunda shelf (Malaya, Sumatra, Java)",
+    "score": 20.602,
+    "share": 0.204,
+    "depth_med": 23,
+    "shallow": 0.71,
+    "shelf_km2_above_120m": 1602868,
+    "score_per_1000km2_shelf": 0.01285
+   },
+   {
+    "region": "W India shelf (Gujarat\u2013Kerala)",
+    "score": 16.605,
+    "share": 0.165,
+    "depth_med": 32,
+    "shallow": 0.78,
+    "shelf_km2_above_120m": 245022,
+    "score_per_1000km2_shelf": 0.06777
+   },
+   {
+    "region": "Makran & Indus delta",
+    "score": 13.375,
+    "share": 0.133,
+    "depth_med": 22,
+    "shallow": 0.95,
+    "shelf_km2_above_120m": 64208,
+    "score_per_1000km2_shelf": 0.20831
+   },
+   {
+    "region": "Oman & Persian Gulf",
+    "score": 5.161,
+    "share": 0.051,
+    "depth_med": 14,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 290639,
+    "score_per_1000km2_shelf": 0.01776
+   },
+   {
+    "region": "Sri Lanka & Palk Strait",
+    "score": 2.506,
+    "share": 0.025,
+    "depth_med": 10,
+    "shallow": 0.97,
+    "shelf_km2_above_120m": 47587,
+    "score_per_1000km2_shelf": 0.05267
+   },
+   {
+    "region": "Gulf of Aden & S Arabia",
+    "score": 0.754,
+    "share": 0.007,
+    "depth_med": 10,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 30948,
+    "score_per_1000km2_shelf": 0.02436
+   },
+   {
+    "region": "Red Sea & Bab-el-Mandeb",
+    "score": 0.64,
+    "share": 0.006,
+    "depth_med": 18,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 183811,
+    "score_per_1000km2_shelf": 0.00348
+   },
+   {
+    "region": "Sahul shelf",
+    "score": 0.161,
+    "share": 0.002,
+    "depth_med": 85,
+    "shallow": 0.0,
+    "shelf_km2_above_120m": 939527,
+    "score_per_1000km2_shelf": 0.00017
+   }
+  ],
+  "abc_nonefud": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.62,
+     3.26,
+     5.5
+    ],
+    "coastal": [
+     1.69,
+     3.32,
+     5.51
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.46,
+     3.1,
+     5.46
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.38,
+     80.06,
+     83.87
+    ],
+    "coastal": [
+     75.34,
+     80.09,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     75.03,
+     80.01,
+     83.85
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.78,
+     0.99,
+     1.15
+    ],
+    "coastal": [
+     0.78,
+     1.0,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.99,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.12,
+     0.38,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     792.65,
+     1374.18
+    ],
+    "coastal": [
+     115.58,
+     818.4,
+     1377.22
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     114.98,
+     780.67,
+     1373.7
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.29,
+     30.98,
+     41.98
+    ],
+    "coastal": [
+     19.99,
+     30.79,
+     41.94
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.25,
+     31.18,
+     41.66
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.3,
+     66.6,
+     308.67
+    ],
+    "coastal": [
+     25.29,
+     66.6,
+     303.41
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     27.0,
+     71.38,
+     321.93
+    ]
+   }
+  },
+  "post_strategy_nonefud": {
+   "coastal": 0.323,
+   "terrestrial": 0.308,
+   "mixed": 0.37
+  }
+ },
+ "c0.2_w0": {
+  "n": 800,
+  "P(mixed earliest at Sahul)": 0.399,
+  "P(coastal earlier than terrestrial)": 0.466,
+  "Sahul arrival ka, median by strategy": {
+   "coastal": 60.5,
+   "terrestrial": 58.4,
+   "mixed": 58.0
+  },
+  "abc": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.7,
+     3.27,
+     5.5
+    ],
+    "coastal": [
+     1.71,
+     3.27,
+     5.45
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.69,
+     3.26,
+     5.51
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.73,
+     80.06,
+     83.87
+    ],
+    "coastal": [
+     75.77,
+     79.97,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     75.33,
+     80.02,
+     83.85
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "coastal": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.99,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.1,
+     0.38,
+     0.61
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.12,
+     0.39,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     792.65,
+     1372.27
+    ],
+    "coastal": [
+     111.99,
+     792.65,
+     1336.48
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     121.7,
+     812.28,
+     1377.3
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.29,
+     31.38,
+     42.31
+    ],
+    "coastal": [
+     20.83,
+     31.67,
+     42.34
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.09,
+     31.09,
+     41.96
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.12,
+     66.2,
+     308.67
+    ],
+    "coastal": [
+     24.37,
+     68.24,
+     307.35
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     25.76,
+     69.51,
+     314.51
+    ]
+   }
+  },
+  "post_strategy": {
+   "coastal": 0.25,
+   "terrestrial": 0.358,
+   "mixed": 0.392
+  },
+  "hotspots": [
+   {
+    "region": "Bay of Bengal & Myanmar",
+    "score": 40.688,
+    "share": 0.403,
+    "depth_med": 28,
+    "shallow": 0.75,
+    "shelf_km2_above_120m": 335941,
+    "score_per_1000km2_shelf": 0.12111
+   },
+   {
+    "region": "Sunda shelf (Malaya, Sumatra, Java)",
+    "score": 20.34,
+    "share": 0.202,
+    "depth_med": 23,
+    "shallow": 0.7,
+    "shelf_km2_above_120m": 1602868,
+    "score_per_1000km2_shelf": 0.01269
+   },
+   {
+    "region": "W India shelf (Gujarat\u2013Kerala)",
+    "score": 16.779,
+    "share": 0.166,
+    "depth_med": 32,
+    "shallow": 0.78,
+    "shelf_km2_above_120m": 245022,
+    "score_per_1000km2_shelf": 0.06848
+   },
+   {
+    "region": "Makran & Indus delta",
+    "score": 13.493,
+    "share": 0.134,
+    "depth_med": 22,
+    "shallow": 0.94,
+    "shelf_km2_above_120m": 64208,
+    "score_per_1000km2_shelf": 0.21014
+   },
+   {
+    "region": "Oman & Persian Gulf",
+    "score": 5.205,
+    "share": 0.052,
+    "depth_med": 14,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 290639,
+    "score_per_1000km2_shelf": 0.01791
+   },
+   {
+    "region": "Sri Lanka & Palk Strait",
+    "score": 2.506,
+    "share": 0.025,
+    "depth_med": 10,
+    "shallow": 0.97,
+    "shelf_km2_above_120m": 47587,
+    "score_per_1000km2_shelf": 0.05267
+   },
+   {
+    "region": "Gulf of Aden & S Arabia",
+    "score": 0.749,
+    "share": 0.007,
+    "depth_med": 10,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 30948,
+    "score_per_1000km2_shelf": 0.02419
+   },
+   {
+    "region": "Red Sea & Bab-el-Mandeb",
+    "score": 0.631,
+    "share": 0.006,
+    "depth_med": 18,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 183811,
+    "score_per_1000km2_shelf": 0.00343
+   },
+   {
+    "region": "Sahul shelf",
+    "score": 0.18,
+    "share": 0.002,
+    "depth_med": 85,
+    "shallow": 0.0,
+    "shelf_km2_above_120m": 939527,
+    "score_per_1000km2_shelf": 0.00019
+   }
+  ]
+ },
+ "c0_w0": {
+  "n": 800,
+  "P(mixed earliest at Sahul)": 0.789,
+  "P(coastal earlier than terrestrial)": 0.466,
+  "Sahul arrival ka, median by strategy": {
+   "coastal": 60.5,
+   "terrestrial": 58.4,
+   "mixed": 59.0
+  },
+  "abc": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.46,
+     3.14,
+     5.47
+    ],
+    "coastal": [
+     1.71,
+     3.27,
+     5.45
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.32,
+     2.8,
+     5.35
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.39,
+     79.97,
+     83.84
+    ],
+    "coastal": [
+     75.77,
+     79.97,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     74.94,
+     79.92,
+     83.77
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "coastal": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.98,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.1,
+     0.38,
+     0.61
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.11,
+     0.37,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     780.67,
+     1371.92
+    ],
+    "coastal": [
+     111.99,
+     792.65,
+     1336.48
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     122.41,
+     784.09,
+     1373.17
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.45,
+     31.4,
+     42.08
+    ],
+    "coastal": [
+     20.83,
+     31.67,
+     42.34
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.26,
+     31.38,
+     41.4
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.12,
+     68.24,
+     308.01
+    ],
+    "coastal": [
+     24.37,
+     68.24,
+     307.35
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     26.54,
+     76.55,
+     313.59
+    ]
+   }
+  },
+  "post_strategy": {
+   "coastal": 0.233,
+   "terrestrial": 0.332,
+   "mixed": 0.435
+  },
+  "hotspots": [
+   {
+    "region": "Bay of Bengal & Myanmar",
+    "score": 40.024,
+    "share": 0.399,
+    "depth_med": 28,
+    "shallow": 0.76,
+    "shelf_km2_above_120m": 335941,
+    "score_per_1000km2_shelf": 0.11914
+   },
+   {
+    "region": "Sunda shelf (Malaya, Sumatra, Java)",
+    "score": 20.574,
+    "share": 0.205,
+    "depth_med": 23,
+    "shallow": 0.72,
+    "shelf_km2_above_120m": 1602868,
+    "score_per_1000km2_shelf": 0.01284
+   },
+   {
+    "region": "W India shelf (Gujarat\u2013Kerala)",
+    "score": 16.449,
+    "share": 0.164,
+    "depth_med": 31,
+    "shallow": 0.79,
+    "shelf_km2_above_120m": 245022,
+    "score_per_1000km2_shelf": 0.06713
+   },
+   {
+    "region": "Makran & Indus delta",
+    "score": 13.285,
+    "share": 0.132,
+    "depth_med": 22,
+    "shallow": 0.95,
+    "shelf_km2_above_120m": 64208,
+    "score_per_1000km2_shelf": 0.20691
+   },
+   {
+    "region": "Oman & Persian Gulf",
+    "score": 5.223,
+    "share": 0.052,
+    "depth_med": 15,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 290639,
+    "score_per_1000km2_shelf": 0.01797
+   },
+   {
+    "region": "Sri Lanka & Palk Strait",
+    "score": 2.506,
+    "share": 0.025,
+    "depth_med": 10,
+    "shallow": 0.97,
+    "shelf_km2_above_120m": 47587,
+    "score_per_1000km2_shelf": 0.05267
+   },
+   {
+    "region": "Gulf of Aden & S Arabia",
+    "score": 0.749,
+    "share": 0.007,
+    "depth_med": 10,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 30948,
+    "score_per_1000km2_shelf": 0.02419
+   },
+   {
+    "region": "Red Sea & Bab-el-Mandeb",
+    "score": 0.645,
+    "share": 0.006,
+    "depth_med": 18,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 183811,
+    "score_per_1000km2_shelf": 0.00351
+   },
+   {
+    "region": "Sahul shelf",
+    "score": 0.169,
+    "share": 0.002,
+    "depth_med": 85,
+    "shallow": 0.0,
+    "shelf_km2_above_120m": 939527,
+    "score_per_1000km2_shelf": 0.00018
+   }
+  ],
+  "abc_nonefud": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.46,
+     3.14,
+     5.48
+    ],
+    "coastal": [
+     1.69,
+     3.32,
+     5.51
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.32,
+     2.8,
+     5.35
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.36,
+     80.05,
+     83.85
+    ],
+    "coastal": [
+     75.34,
+     80.09,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     74.94,
+     79.92,
+     83.77
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.78,
+     0.99,
+     1.15
+    ],
+    "coastal": [
+     0.78,
+     1.0,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.98,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.11,
+     0.37,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     792.65,
+     1373.63
+    ],
+    "coastal": [
+     115.58,
+     818.4,
+     1377.22
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     122.41,
+     784.09,
+     1373.17
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.29,
+     31.18,
+     41.9
+    ],
+    "coastal": [
+     19.99,
+     30.79,
+     41.94
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.26,
+     31.38,
+     41.4
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.3,
+     68.24,
+     304.06
+    ],
+    "coastal": [
+     25.29,
+     66.6,
+     303.41
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     26.54,
+     76.55,
+     313.59
+    ]
+   }
+  },
+  "post_strategy_nonefud": {
+   "coastal": 0.312,
+   "terrestrial": 0.298,
+   "mixed": 0.39
+  }
+ },
+ "c0_w10": {
+  "n": 800,
+  "P(mixed earliest at Sahul)": 0.789,
+  "P(coastal earlier than terrestrial)": 0.463,
+  "Sahul arrival ka, median by strategy": {
+   "coastal": 60.5,
+   "terrestrial": 58.4,
+   "mixed": 59.0
+  },
+  "abc": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.46,
+     3.14,
+     5.47
+    ],
+    "coastal": [
+     1.71,
+     3.27,
+     5.45
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.3,
+     2.78,
+     5.35
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.39,
+     79.97,
+     83.84
+    ],
+    "coastal": [
+     75.77,
+     79.97,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     74.94,
+     79.94,
+     83.76
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "coastal": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.98,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.1,
+     0.38,
+     0.61
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.11,
+     0.37,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     784.09,
+     1371.57
+    ],
+    "coastal": [
+     111.99,
+     792.65,
+     1336.48
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     123.11,
+     786.39,
+     1372.72
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.45,
+     31.38,
+     42.06
+    ],
+    "coastal": [
+     20.83,
+     31.67,
+     42.34
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.27,
+     31.18,
+     41.37
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.12,
+     68.24,
+     307.35
+    ],
+    "coastal": [
+     24.37,
+     68.24,
+     307.35
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     26.62,
+     75.31,
+     312.67
+    ]
+   }
+  },
+  "post_strategy": {
+   "coastal": 0.232,
+   "terrestrial": 0.332,
+   "mixed": 0.436
+  },
+  "hotspots": [
+   {
+    "region": "Bay of Bengal & Myanmar",
+    "score": 40.021,
+    "share": 0.399,
+    "depth_med": 28,
+    "shallow": 0.76,
+    "shelf_km2_above_120m": 335941,
+    "score_per_1000km2_shelf": 0.11913
+   },
+   {
+    "region": "Sunda shelf (Malaya, Sumatra, Java)",
+    "score": 20.574,
+    "share": 0.205,
+    "depth_med": 23,
+    "shallow": 0.72,
+    "shelf_km2_above_120m": 1602868,
+    "score_per_1000km2_shelf": 0.01284
+   },
+   {
+    "region": "W India shelf (Gujarat\u2013Kerala)",
+    "score": 16.449,
+    "share": 0.164,
+    "depth_med": 31,
+    "shallow": 0.79,
+    "shelf_km2_above_120m": 245022,
+    "score_per_1000km2_shelf": 0.06713
+   },
+   {
+    "region": "Makran & Indus delta",
+    "score": 13.285,
+    "share": 0.132,
+    "depth_med": 22,
+    "shallow": 0.95,
+    "shelf_km2_above_120m": 64208,
+    "score_per_1000km2_shelf": 0.20691
+   },
+   {
+    "region": "Oman & Persian Gulf",
+    "score": 5.223,
+    "share": 0.052,
+    "depth_med": 15,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 290639,
+    "score_per_1000km2_shelf": 0.01797
+   },
+   {
+    "region": "Sri Lanka & Palk Strait",
+    "score": 2.506,
+    "share": 0.025,
+    "depth_med": 10,
+    "shallow": 0.97,
+    "shelf_km2_above_120m": 47587,
+    "score_per_1000km2_shelf": 0.05267
+   },
+   {
+    "region": "Gulf of Aden & S Arabia",
+    "score": 0.749,
+    "share": 0.007,
+    "depth_med": 10,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 30948,
+    "score_per_1000km2_shelf": 0.02419
+   },
+   {
+    "region": "Red Sea & Bab-el-Mandeb",
+    "score": 0.645,
+    "share": 0.006,
+    "depth_med": 18,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 183811,
+    "score_per_1000km2_shelf": 0.00351
+   },
+   {
+    "region": "Sahul shelf",
+    "score": 0.166,
+    "share": 0.002,
+    "depth_med": 85,
+    "shallow": 0.0,
+    "shelf_km2_above_120m": 939527,
+    "score_per_1000km2_shelf": 0.00018
+   }
+  ]
+ },
+ "c0_w2": {
+  "n": 800,
+  "P(mixed earliest at Sahul)": 0.79,
+  "P(coastal earlier than terrestrial)": 0.464,
+  "Sahul arrival ka, median by strategy": {
+   "coastal": 60.5,
+   "terrestrial": 58.4,
+   "mixed": 59.0
+  },
+  "abc": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.46,
+     3.14,
+     5.47
+    ],
+    "coastal": [
+     1.71,
+     3.27,
+     5.45
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.3,
+     2.78,
+     5.35
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.39,
+     79.97,
+     83.84
+    ],
+    "coastal": [
+     75.77,
+     79.97,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     74.94,
+     79.94,
+     83.76
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "coastal": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.98,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.1,
+     0.38,
+     0.61
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.11,
+     0.37,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     784.09,
+     1371.57
+    ],
+    "coastal": [
+     111.99,
+     792.65,
+     1336.48
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     123.11,
+     786.39,
+     1372.72
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.45,
+     31.38,
+     42.06
+    ],
+    "coastal": [
+     20.83,
+     31.67,
+     42.34
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.27,
+     31.18,
+     41.37
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.12,
+     68.24,
+     307.35
+    ],
+    "coastal": [
+     24.37,
+     68.24,
+     307.35
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     26.62,
+     75.31,
+     312.67
+    ]
+   }
+  },
+  "post_strategy": {
+   "coastal": 0.232,
+   "terrestrial": 0.332,
+   "mixed": 0.436
+  },
+  "hotspots": [
+   {
+    "region": "Bay of Bengal & Myanmar",
+    "score": 40.02,
+    "share": 0.399,
+    "depth_med": 28,
+    "shallow": 0.76,
+    "shelf_km2_above_120m": 335941,
+    "score_per_1000km2_shelf": 0.11913
+   },
+   {
+    "region": "Sunda shelf (Malaya, Sumatra, Java)",
+    "score": 20.59,
+    "share": 0.205,
+    "depth_med": 23,
+    "shallow": 0.72,
+    "shelf_km2_above_120m": 1602868,
+    "score_per_1000km2_shelf": 0.01285
+   },
+   {
+    "region": "W India shelf (Gujarat\u2013Kerala)",
+    "score": 16.446,
+    "share": 0.164,
+    "depth_med": 31,
+    "shallow": 0.79,
+    "shelf_km2_above_120m": 245022,
+    "score_per_1000km2_shelf": 0.06712
+   },
+   {
+    "region": "Makran & Indus delta",
+    "score": 13.285,
+    "share": 0.132,
+    "depth_med": 22,
+    "shallow": 0.95,
+    "shelf_km2_above_120m": 64208,
+    "score_per_1000km2_shelf": 0.20691
+   },
+   {
+    "region": "Oman & Persian Gulf",
+    "score": 5.218,
+    "share": 0.052,
+    "depth_med": 15,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 290639,
+    "score_per_1000km2_shelf": 0.01795
+   },
+   {
+    "region": "Sri Lanka & Palk Strait",
+    "score": 2.506,
+    "share": 0.025,
+    "depth_med": 10,
+    "shallow": 0.97,
+    "shelf_km2_above_120m": 47587,
+    "score_per_1000km2_shelf": 0.05267
+   },
+   {
+    "region": "Gulf of Aden & S Arabia",
+    "score": 0.749,
+    "share": 0.007,
+    "depth_med": 10,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 30948,
+    "score_per_1000km2_shelf": 0.02419
+   },
+   {
+    "region": "Red Sea & Bab-el-Mandeb",
+    "score": 0.645,
+    "share": 0.006,
+    "depth_med": 18,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 183811,
+    "score_per_1000km2_shelf": 0.00351
+   },
+   {
+    "region": "Sahul shelf",
+    "score": 0.171,
+    "share": 0.002,
+    "depth_med": 85,
+    "shallow": 0.0,
+    "shelf_km2_above_120m": 939527,
+    "score_per_1000km2_shelf": 0.00018
+   }
+  ]
+ },
+ "c0_w5": {
+  "n": 800,
+  "P(mixed earliest at Sahul)": 0.79,
+  "P(coastal earlier than terrestrial)": 0.463,
+  "Sahul arrival ka, median by strategy": {
+   "coastal": 60.5,
+   "terrestrial": 58.4,
+   "mixed": 59.0
+  },
+  "abc": {
+   "v_max": {
+    "prior": [
+     0.86,
+     2.05,
+     5.08
+    ],
+    "post_all": [
+     1.46,
+     3.14,
+     5.47
+    ],
+    "coastal": [
+     1.71,
+     3.27,
+     5.45
+    ],
+    "terrestrial": [
+     1.71,
+     3.3,
+     5.52
+    ],
+    "mixed": [
+     1.3,
+     2.78,
+     5.35
+    ]
+   },
+   "t0": {
+    "prior": [
+     73.33,
+     78.5,
+     83.48
+    ],
+    "post_all": [
+     75.39,
+     79.97,
+     83.84
+    ],
+    "coastal": [
+     75.77,
+     79.97,
+     83.87
+    ],
+    "terrestrial": [
+     75.82,
+     80.11,
+     83.84
+    ],
+    "mixed": [
+     74.94,
+     79.94,
+     83.76
+    ]
+   },
+   "c_adv": {
+    "prior": [
+     0.76,
+     0.96,
+     1.15
+    ],
+    "post_all": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "coastal": [
+     0.77,
+     0.98,
+     1.15
+    ],
+    "terrestrial": [
+     0.77,
+     0.98,
+     1.13
+    ],
+    "mixed": [
+     0.78,
+     0.98,
+     1.15
+    ]
+   },
+   "fw_floor": {
+    "prior": [
+     0.1,
+     0.36,
+     0.63
+    ],
+    "post_all": [
+     0.12,
+     0.38,
+     0.63
+    ],
+    "coastal": [
+     0.1,
+     0.38,
+     0.61
+    ],
+    "terrestrial": [
+     0.12,
+     0.39,
+     0.63
+    ],
+    "mixed": [
+     0.11,
+     0.37,
+     0.63
+    ]
+   },
+   "biome_pen": {
+    "prior": [
+     124.11,
+     740.4,
+     1369.43
+    ],
+    "post_all": [
+     110.8,
+     784.09,
+     1371.57
+    ],
+    "coastal": [
+     111.99,
+     792.65,
+     1336.48
+    ],
+    "terrestrial": [
+     106.76,
+     776.24,
+     1364.35
+    ],
+    "mixed": [
+     123.11,
+     786.39,
+     1372.72
+    ]
+   },
+   "lam": {
+    "prior": [
+     17.81,
+     29.5,
+     41.65
+    ],
+    "post_all": [
+     19.45,
+     31.38,
+     42.06
+    ],
+    "coastal": [
+     20.83,
+     31.67,
+     42.34
+    ],
+    "terrestrial": [
+     19.29,
+     31.53,
+     42.32
+    ],
+    "mixed": [
+     19.27,
+     31.18,
+     41.37
+    ]
+   },
+   "w0": {
+    "prior": [
+     26.6,
+     88.61,
+     356.86
+    ],
+    "post_all": [
+     25.12,
+     68.24,
+     307.35
+    ],
+    "coastal": [
+     24.37,
+     68.24,
+     307.35
+    ],
+    "terrestrial": [
+     25.29,
+     61.82,
+     301.6
+    ],
+    "mixed": [
+     26.62,
+     75.31,
+     312.67
+    ]
+   }
+  },
+  "post_strategy": {
+   "coastal": 0.232,
+   "terrestrial": 0.332,
+   "mixed": 0.436
+  },
+  "hotspots": [
+   {
+    "region": "Bay of Bengal & Myanmar",
+    "score": 40.021,
+    "share": 0.399,
+    "depth_med": 28,
+    "shallow": 0.76,
+    "shelf_km2_above_120m": 335941,
+    "score_per_1000km2_shelf": 0.11913
+   },
+   {
+    "region": "Sunda shelf (Malaya, Sumatra, Java)",
+    "score": 20.574,
+    "share": 0.205,
+    "depth_med": 23,
+    "shallow": 0.72,
+    "shelf_km2_above_120m": 1602868,
+    "score_per_1000km2_shelf": 0.01284
+   },
+   {
+    "region": "W India shelf (Gujarat\u2013Kerala)",
+    "score": 16.449,
+    "share": 0.164,
+    "depth_med": 31,
+    "shallow": 0.79,
+    "shelf_km2_above_120m": 245022,
+    "score_per_1000km2_shelf": 0.06713
+   },
+   {
+    "region": "Makran & Indus delta",
+    "score": 13.285,
+    "share": 0.132,
+    "depth_med": 22,
+    "shallow": 0.95,
+    "shelf_km2_above_120m": 64208,
+    "score_per_1000km2_shelf": 0.20691
+   },
+   {
+    "region": "Oman & Persian Gulf",
+    "score": 5.223,
+    "share": 0.052,
+    "depth_med": 15,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 290639,
+    "score_per_1000km2_shelf": 0.01797
+   },
+   {
+    "region": "Sri Lanka & Palk Strait",
+    "score": 2.506,
+    "share": 0.025,
+    "depth_med": 10,
+    "shallow": 0.97,
+    "shelf_km2_above_120m": 47587,
+    "score_per_1000km2_shelf": 0.05267
+   },
+   {
+    "region": "Gulf of Aden & S Arabia",
+    "score": 0.749,
+    "share": 0.007,
+    "depth_med": 10,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 30948,
+    "score_per_1000km2_shelf": 0.02419
+   },
+   {
+    "region": "Red Sea & Bab-el-Mandeb",
+    "score": 0.645,
+    "share": 0.006,
+    "depth_med": 18,
+    "shallow": 1.0,
+    "shelf_km2_above_120m": 183811,
+    "score_per_1000km2_shelf": 0.00351
+   },
+   {
+    "region": "Sahul shelf",
+    "score": 0.165,
+    "share": 0.002,
+    "depth_med": 85,
+    "shallow": 0.0,
+    "shelf_km2_above_120m": 939527,
+    "score_per_1000km2_shelf": 0.00018
+   }
+  ]
+ }
+}

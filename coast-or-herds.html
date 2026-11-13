@@ -67,7 +67,7 @@ details{margin:10px 0}summary{cursor:pointer;color:var(--text-secondary);font-si
 <ul>
 <li><b>Your instinct holds up on speed.</b> In paired runs (same climate, same sea level, same walking speed), the coastal strategy reached Sahul first in <b><span id="v-win"></span></b> of runs, by a median of about <b><span id="v-delta"></span> years</b>.</li>
 <li><b>Your "the sites are sunk" point is real and measurable.</b> A median <b><span id="v-sunk-c"></span></b> of the coastal route is now underwater, vs <span id="v-sunk-t"></span> for the inland route, and this grid undercounts it.</li>
-<li><b>Pure beachcombing loses on fit to the evidence.</b> Humans were in interior Arabia (the Nefud lakes, ~95–55 ka), and a coast-only population rarely gets there. The best-fitting model is a <b>mixed forager</b>: coast-anchored, but pushing up rivers and into green inland basins when rain allowed.</li>
+<li><b>Pure beachcombing loses on fit only because of the Nefud constraint.</b> Humans were in interior Arabia (the Nefud lakes, ~95–55 ka), and a coast-only population rarely gets there. That constraint is not independent of the assumed 70–73 ka humid window; without it, coastal and terrestrial tie (posterior 0.31 vs 0.30). The best-fitting model is a <b>mixed forager</b>, but partly by construction (it takes the faster of the two routes at no cost; with a 20% efficiency cost it reaches Sahul first in 40% of runs, not 79%): coast-anchored, but pushing up rivers and into green inland basins when rain allowed.</li>
 <li><b>The current evidence can't break the tie.</b> Fitting the model to the known sites pins down speed (~3 km/yr) and an early exit (~80 ka, in a wet phase), but not how rich the coast was. Drowned sites, mostly in 10–50 m of water, are the test.</li>
 <li><b>The deciding assumption is coastal productivity.</b> If the shore was at least ~85% as rich as the best savanna, the coastal route wins almost every time. Below that, it doesn't.</li>
 </ul>
@@ -88,7 +88,7 @@ details{margin:10px 0}summary{cursor:pointer;color:var(--text-secondary);font-si
 <tbody>
 <tr><td><b style="color:var(--s-coastal)">Coastal</b></td><td style="text-align:left">Within ~37 km of the shore. Quality = coastal productivity × fresh water. Arid coasts keep some water from coastal springs even in dry phases. Inland is used only weakly. No re-learning cost while staying on the shore.</td></tr>
 <tr><td><b style="color:var(--s-terr)">Megafauna</b></td><td style="text-align:left">Grassland and game. Quality = biome × rainfall pulse × altitude, with river corridors (Nile, Tigris-Euphrates, Indus, the Gulf basin) as refuges. Pays a re-tooling delay every time it enters a new biome.</td></tr>
-<tr><td><b style="color:var(--s-mixed)">Mixed</b></td><td style="text-align:left">Takes whichever is better in each cell.</td></tr>
+<tr><td><b style="color:var(--s-mixed)">Mixed</b></td><td style="text-align:left">Takes whichever is better in each cell, at no cost in the published runs (see REVIEW_RESPONSE.md for the costed version).</td></tr>
 </tbody></table>
 
 <h3>Climate inputs (median and 10–90% range across runs)</h3>
@@ -160,7 +160,7 @@ details{margin:10px 0}summary{cursor:pointer;color:var(--text-secondary);font-si
 <div class="legend"><span><i class="sw" style="background:linear-gradient(90deg,#9ec5f0,#0d3a75)"></i>Depth today: 0 → 100 m</span><span>Bigger dot = more runs passed through</span></div>
 <figcaption>Present depth is the median over each 37 km cell. The beach itself sat at the lowstand line, 60–90 m down. The cells behind it, where people also camped, are shallower.</figcaption></figure>
 <table id="hot"><thead><tr><th>Region</th><th>Share of drowned route</th><th>Typical depth</th></tr></thead><tbody></tbody></table>
-<p style="font-size:14px;color:var(--text-secondary)">Half of the drowned route lies in under ~<span id="x-dmed"></span> m of water, which is diver and sub-bottom-sonar territory. The Bay of Bengal–Myanmar shelf, the Sunda shelf and the Gujarat–Indus shelf hold most of it. The Red Sea and south Arabian shelves are narrow enough that this 37 km grid misses them, so treat their small shares as an artefact, not a signal.</p>
+<p style="font-size:14px;color:var(--text-secondary)">Half of the drowned route lies in under ~<span id="x-dmed"></span> m of water, which is diver and sub-bottom-sonar territory. The Bay of Bengal–Myanmar shelf, the Sunda shelf and the Gujarat–Indus shelf hold most of it, partly because they are wide. Per 1,000 km² of shelf, the Makran–Indus delta ranks first and the Sunda shelf near last (REVIEW_RESPONSE.md). The Red Sea and south Arabian shelves are narrow enough that this 37 km grid misses them, so treat their small shares as an artefact, not a signal.</p>
 
 <h2>Verdict</h2>
 <p>The model supports a softened version of your view. A coastal track is the fastest and most climate-proof way to get from the Horn to Sahul, and it predicts the sparse record we actually see, because roughly half of it is now under 60–90 m of water. But "simply following the coast" is less likely than people using the coast as a highway while making inland excursions when rains opened up the interior. Megafauna hunting alone fits the interior Arabian sites but crosses the Arabian and Iranian deserts only in brief windows. The mixed strategy is the most likely in both chronologies.</p>
