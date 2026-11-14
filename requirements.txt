@@ -4,3 +4,6 @@ pandas
 matplotlib
 numba
 pillow
+xarray      # optional: real paleoclimate habitat (climate_inputs.py)
+netCDF4     # optional
+pyvista     # optional: only to rebuild data/grid.npz

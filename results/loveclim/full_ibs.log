@@ -1,0 +1,21 @@
+40/800 runs  23s
+80/800 runs  38s
+120/800 runs  62s
+160/800 runs  80s
+200/800 runs  105s
+240/800 runs  123s
+280/800 runs  148s
+320/800 runs  168s
+360/800 runs  195s
+400/800 runs  214s
+440/800 runs  240s
+480/800 runs  260s
+520/800 runs  286s
+560/800 runs  306s
+600/800 runs  333s
+640/800 runs  353s
+680/800 runs  380s
+720/800 runs  401s
+760/800 runs  427s
+800/800 runs  447s
+done 448 s; 800 runs -> /Users/treymenefee/code/ooa-coast-vs-herds/work/mc_ibs.pkl

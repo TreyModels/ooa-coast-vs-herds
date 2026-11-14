@@ -1,0 +1,170 @@
+{
+ "box c_mix 0": {
+  "L": {
+   "n": 400,
+   "P(mixed earliest at Sahul)": 0.983,
+   "P(coastal earlier than terrestrial)": 0.75,
+   "reach Sahul": {
+    "coastal": 0.985,
+    "terrestrial": 0.993,
+    "mixed": 1.0
+   },
+   "posterior": {
+    "coastal": 0.233,
+    "terrestrial": 0.332,
+    "mixed": 0.435
+   },
+   "posterior_accepted": {
+    "coastal": 133,
+    "terrestrial": 190,
+    "mixed": 249
+   },
+   "posterior_no_nefud": {
+    "coastal": 0.312,
+    "terrestrial": 0.298,
+    "mixed": 0.39
+   },
+   "posterior_no_nefud_accepted": {
+    "coastal": 199,
+    "terrestrial": 190,
+    "mixed": 249
+   }
+  },
+  "S": {
+   "n": 400,
+   "P(mixed earliest at Sahul)": 0.595,
+   "P(coastal earlier than terrestrial)": 0.217,
+   "reach Sahul": {
+    "coastal": 0.495,
+    "terrestrial": 0.565,
+    "mixed": 0.733
+   }
+  }
+ },
+ "loveclim c_mix 0": {
+  "L": {
+   "n": 400,
+   "P(mixed earliest at Sahul)": 0.988,
+   "P(coastal earlier than terrestrial)": 0.825,
+   "reach Sahul": {
+    "coastal": 1.0,
+    "terrestrial": 0.9,
+    "mixed": 1.0
+   },
+   "posterior": {
+    "coastal": 0.161,
+    "terrestrial": 0.359,
+    "mixed": 0.48
+   },
+   "posterior_accepted": {
+    "coastal": 40,
+    "terrestrial": 89,
+    "mixed": 119
+   },
+   "posterior_no_nefud": {
+    "coastal": 0.328,
+    "terrestrial": 0.264,
+    "mixed": 0.408
+   },
+   "posterior_no_nefud_accepted": {
+    "coastal": 195,
+    "terrestrial": 157,
+    "mixed": 243
+   }
+  },
+  "S": {
+   "n": 400,
+   "P(mixed earliest at Sahul)": 0.647,
+   "P(coastal earlier than terrestrial)": 0.135,
+   "reach Sahul": {
+    "coastal": 0.557,
+    "terrestrial": 0.613,
+    "mixed": 0.757
+   }
+  }
+ },
+ "loveclim c_mix 0.1": {
+  "L": {
+   "n": 400,
+   "P(mixed earliest at Sahul)": 0.815,
+   "P(coastal earlier than terrestrial)": 0.825,
+   "reach Sahul": {
+    "coastal": 1.0,
+    "terrestrial": 0.9,
+    "mixed": 1.0
+   },
+   "posterior": {
+    "coastal": 0.17,
+    "terrestrial": 0.379,
+    "mixed": 0.451
+   },
+   "posterior_accepted": {
+    "coastal": 40,
+    "terrestrial": 89,
+    "mixed": 106
+   },
+   "posterior_no_nefud": {
+    "coastal": 0.341,
+    "terrestrial": 0.274,
+    "mixed": 0.385
+   },
+   "posterior_no_nefud_accepted": {
+    "coastal": 195,
+    "terrestrial": 157,
+    "mixed": 220
+   }
+  },
+  "S": {
+   "n": 400,
+   "P(mixed earliest at Sahul)": 0.49,
+   "P(coastal earlier than terrestrial)": 0.135,
+   "reach Sahul": {
+    "coastal": 0.557,
+    "terrestrial": 0.613,
+    "mixed": 0.723
+   }
+  }
+ },
+ "loveclim c_mix 0.2": {
+  "L": {
+   "n": 400,
+   "P(mixed earliest at Sahul)": 0.193,
+   "P(coastal earlier than terrestrial)": 0.825,
+   "reach Sahul": {
+    "coastal": 1.0,
+    "terrestrial": 0.9,
+    "mixed": 1.0
+   },
+   "posterior": {
+    "coastal": 0.182,
+    "terrestrial": 0.405,
+    "mixed": 0.414
+   },
+   "posterior_accepted": {
+    "coastal": 40,
+    "terrestrial": 89,
+    "mixed": 91
+   },
+   "posterior_no_nefud": {
+    "coastal": 0.354,
+    "terrestrial": 0.285,
+    "mixed": 0.361
+   },
+   "posterior_no_nefud_accepted": {
+    "coastal": 195,
+    "terrestrial": 157,
+    "mixed": 199
+   }
+  },
+  "S": {
+   "n": 400,
+   "P(mixed earliest at Sahul)": 0.34,
+   "P(coastal earlier than terrestrial)": 0.135,
+   "reach Sahul": {
+    "coastal": 0.557,
+    "terrestrial": 0.613,
+    "mixed": 0.665
+   }
+  }
+ }
+}
