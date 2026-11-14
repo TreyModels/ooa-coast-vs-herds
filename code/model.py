@@ -13,7 +13,8 @@ import numpy as np, heapq, os
 from scipy import ndimage
 import numba as nb
 
-G = np.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'grid.npz'))
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+G = np.load(os.environ.get('OOA_GRID', os.path.join(ROOT, 'data', 'grid.npz')))
 ZMAX, ZMED, ZMIN, LAT, LON = G['zmax'], G['zmed'], G['zmin'], G['lat'], G['lon']
 NY, NX = ZMAX.shape
 N = NY * NX

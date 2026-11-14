@@ -1,0 +1,15 @@
+cache: /Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/ooa-coast-vs-herds/data/external/ibs_hds/climate_20min.npz
+NPP90 (kgC/m2/yr, land, 100-35 ka): 0.8795239329338074
+netpp      land p5/p50/p95: 0.012 0.329 0.932
+desert_fr  land p5/p50/p95: 0.000 11.519 94.220
+temp       land p5/p50/p95: -3.567 22.979 28.971
+Arabia mean desert_fr % by ka:
+30:80 35:64 40:69 45:67 50:57 55:48 60:42 65:66 70:84 75:78 80:36 85:5 90:45 95:73 100:48 105:24
+unresolved-land source cells (any time 35-100 ka): 84
+  Nusa Tenggara/Timor          3
+  Sulawesi/Moluccas            2
+  Sunda (Sumatra/Java/Borneo)  0
+  New Guinea/N Sahul           1
+  Arabia/Red Sea               24
+  India/Sri Lanka              0
+Nusa Tenggara land netpp after fix, p10/p50/p90 over 35-100 ka: [0.228 0.479 0.777]

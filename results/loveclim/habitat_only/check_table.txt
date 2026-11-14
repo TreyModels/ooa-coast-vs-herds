@@ -1,0 +1,22 @@
+runs in mc_ibs.pkl: 24  scen=['L']
+
+Sahul reach rate and median arrival (t0 - arrival)/1000 ka over finite runs
+climate  strategy     n_reached   share  median_ka    perrun_ka_range
+box      coastal             24  100.0%      11.91           4.2-37.3
+box      terrestrial         23   95.8%      12.93           4.9-38.1
+box      mixed               24  100.0%      10.32           3.5-36.1
+ibs      coastal             24  100.0%      11.96           4.1-37.4
+ibs      terrestrial         21   87.5%      15.08           6.5-38.1
+ibs      mixed               24  100.0%      10.61           3.8-36.6
+
+Site reach share (fraction of 24 runs with any arrival) per climate x strategy
+site                           box|coas box|terr box|mixe ibs|coas ibs|terr ibs|mixe
+Sulawesi (Maros / Muna)            100.0%    100.0%    100.0%    100.0%     91.7%    100.0%
+Nefud palaeolakes (N Arabia)        62.5%    100.0%    100.0%     20.8%     95.8%    100.0%
+
+Median site arrival (t0 - arrival)/1000 ka where reached
+site                           box|coas box|terr box|mixe ibs|coas ibs|terr ibs|mixe
+Sulawesi (Maros / Muna)              9.75      9.81      7.54      8.58     11.88      7.43
+Nefud palaeolakes (N Arabia)         1.40      0.88      0.77      1.50     17.51     17.19
+
+GATE: ibs|terrestrial reaches Sahul in 87.5% of 24 runs (PASS at 40 % threshold)

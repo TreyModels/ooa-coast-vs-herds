@@ -51,3 +51,7 @@ Full run order from an empty `work/` folder: `build.py` → `mc.py 400` → `fig
 ## Attribution and reuse
 
 Credit and cite **Dr. Trey Menefee** when using, reproducing, sharing, or adapting his material. Noncommercial use is permitted under the conditions in [LICENSE](LICENSE); commercial use requires prior permission. Third-party materials retain their own terms.
+
+## LOVECLIM climate
+
+`code/climate_ibs.py`, `code/model_ibs.py` and `code/mc_ibs.py` replace the hand-drawn biomes with the LOVECLIM transient climate behind Timmermann & Friedrich 2016. Run `code/run_loveclim.sh` after fetching the climate files (`data/external/IBS_HDS_README.md`; they are CC BY-NC and not in the repo). Results: `results/loveclim/README.md`.

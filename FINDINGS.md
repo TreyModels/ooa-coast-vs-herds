@@ -67,3 +67,7 @@ Fit = share of runs reaching all 10 dated sites on time **and** staying out of S
 - There's no explicit demography (population size, Allee effects, competition with archaics). Genetics uses path-based approximations, not coalescent simulation.
 - Present depth is a cell median, so narrow drowned beaches are under-counted.
 - Results show the logic of each strategy; they don't date any event.
+
+## LOVECLIM climate (14 November 2026)
+
+With habitat and biome classes from the LOVECLIM transient climate, coastal reaches Sahul before megafauna in 82.5% of paired runs (75% hand-drawn). Mixed fits best only at zero switching cost, and the Nefud test decides the coastal vs megafauna ranking. See `results/loveclim/README.md` and `REVIEW_RESPONSE.md`.

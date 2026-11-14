@@ -55,3 +55,15 @@ The **Makran & Indus delta** ranks first per unit of shelf. The Bay of Bengal's 
 - Replace the 17-point sea-level curve with the cited reconstruction (Spratt & Lisiecki 2016, NOAA NCEI; Grant et al. 2012, NCEI study 13685).
 - Source the front-speed prior (see above).
 - Compare against the least-cost-path literature (Field & Lahr 2005; Field et al. 2007; other studies listed in the Atlas `inputs/other_sources.json`, item G).
+
+## Same tests on the LOVECLIM climate (14 November 2026)
+
+Habitat and re-tooling classes from the LOVECLIM transient run behind Timmermann & Friedrich 2016 (`code/model_ibs.py`, runner `code/run_loveclim.sh`, output `results/loveclim/review_ibs.json`). Long chronology, 400 paired draws.
+
+| c_mix | P(mixed first at Sahul) | Posterior coastal / megafauna / mixed | Without the Nefud test |
+|---|---|---|---|
+| 0 | 0.99 | 0.16 / 0.36 / 0.48 | 0.33 / 0.26 / 0.41 |
+| 0.1 | 0.82 | 0.17 / 0.38 / 0.45 | 0.34 / 0.27 / 0.39 |
+| 0.2 | 0.19 | 0.18 / 0.41 / 0.41 | 0.35 / 0.29 / 0.36 |
+
+Coastal reaches Sahul before megafauna in 82.5% of runs (75% on the hand-drawn climate). Both review conclusions hold under the modelled climate: mixed leads only when flexibility is free, and the Nefud test decides the coastal vs megafauna ranking. Without it, coastal fits better than megafauna.

@@ -1,0 +1,1054 @@
+{
+ "n_runs": {
+  "L": 400,
+  "S": 400
+ },
+ "outcomes_L": {
+  "box": {
+   "coastal": {
+    "reach_sahul": 0.985,
+    "transit_ka": [
+     5.52,
+     12.17,
+     24.4
+    ],
+    "route_sunk": [
+     0.35,
+     0.46,
+     0.55
+    ]
+   },
+   "terrestrial": {
+    "reach_sahul": 0.993,
+    "transit_ka": [
+     6.41,
+     13.29,
+     24.44
+    ],
+    "route_sunk": [
+     0.21,
+     0.33,
+     0.43
+    ]
+   },
+   "mixed": {
+    "reach_sahul": 1.0,
+    "transit_ka": [
+     4.85,
+     10.88,
+     20.63
+    ],
+    "route_sunk": [
+     0.29,
+     0.39,
+     0.46
+    ]
+   },
+   "coastal_beats_terrestrial": 0.75,
+   "coastal_win_by_c_adv_quartile": [
+    0.36,
+    0.79,
+    0.9,
+    0.95
+   ],
+   "coastal_win_by_biome_pen_quartile": [
+    0.67,
+    0.72,
+    0.77,
+    0.84
+   ]
+  },
+  "ibs": {
+   "coastal": {
+    "reach_sahul": 1.0,
+    "transit_ka": [
+     5.55,
+     12.34,
+     23.87
+    ],
+    "route_sunk": [
+     0.38,
+     0.46,
+     0.54
+    ]
+   },
+   "terrestrial": {
+    "reach_sahul": 0.9,
+    "transit_ka": [
+     6.5,
+     16.94,
+     31.43
+    ],
+    "route_sunk": [
+     0.13,
+     0.18,
+     0.22
+    ]
+   },
+   "mixed": {
+    "reach_sahul": 1.0,
+    "transit_ka": [
+     5.01,
+     10.88,
+     21.15
+    ],
+    "route_sunk": [
+     0.19,
+     0.44,
+     0.53
+    ]
+   },
+   "coastal_beats_terrestrial": 0.825,
+   "coastal_win_by_c_adv_quartile": [
+    0.71,
+    0.82,
+    0.85,
+    0.92
+   ],
+   "coastal_win_by_biome_pen_quartile": [
+    0.85,
+    0.82,
+    0.84,
+    0.79
+   ]
+  },
+  "same_winner_both_climates": 0.695
+ },
+ "outcomes_S": {
+  "box": {
+   "coastal": {
+    "reach_sahul": 0.495,
+    "transit_ka": [
+     6.44,
+     10.32,
+     13.0
+    ],
+    "route_sunk": [
+     0.5,
+     0.56,
+     0.64
+    ]
+   },
+   "terrestrial": {
+    "reach_sahul": 0.565,
+    "transit_ka": [
+     5.67,
+     9.8,
+     13.06
+    ],
+    "route_sunk": [
+     0.32,
+     0.44,
+     0.52
+    ]
+   },
+   "mixed": {
+    "reach_sahul": 0.733,
+    "transit_ka": [
+     4.78,
+     8.46,
+     12.99
+    ],
+    "route_sunk": [
+     0.43,
+     0.5,
+     0.57
+    ]
+   },
+   "coastal_beats_terrestrial": 0.217,
+   "coastal_win_by_c_adv_quartile": [
+    0.15,
+    0.13,
+    0.21,
+    0.38
+   ],
+   "coastal_win_by_biome_pen_quartile": [
+    0.2,
+    0.21,
+    0.18,
+    0.28
+   ]
+  },
+  "ibs": {
+   "coastal": {
+    "reach_sahul": 0.557,
+    "transit_ka": [
+     5.82,
+     9.72,
+     12.81
+    ],
+    "route_sunk": [
+     0.5,
+     0.55,
+     0.64
+    ]
+   },
+   "terrestrial": {
+    "reach_sahul": 0.613,
+    "transit_ka": [
+     4.94,
+     8.64,
+     12.89
+    ],
+    "route_sunk": [
+     0.18,
+     0.24,
+     0.3
+    ]
+   },
+   "mixed": {
+    "reach_sahul": 0.757,
+    "transit_ka": [
+     4.54,
+     8.22,
+     12.8
+    ],
+    "route_sunk": [
+     0.27,
+     0.6,
+     0.67
+    ]
+   },
+   "coastal_beats_terrestrial": 0.135,
+   "coastal_win_by_c_adv_quartile": [
+    0.04,
+    0.05,
+    0.11,
+    0.34
+   ],
+   "coastal_win_by_biome_pen_quartile": [
+    0.13,
+    0.14,
+    0.14,
+    0.13
+   ]
+  },
+  "same_winner_both_climates": 0.807
+ },
+ "abc_L": {
+  "box": {
+   "accepted": {
+    "coastal": 133,
+    "terrestrial": 190,
+    "mixed": 249
+   },
+   "post_strategy": {
+    "coastal": 0.233,
+    "terrestrial": 0.332,
+    "mixed": 0.435
+   },
+   "params": {
+    "c_adv": {
+     "prior": [
+      0.76,
+      0.96,
+      1.15
+     ],
+     "posterior": [
+      0.77,
+      0.98,
+      1.15
+     ]
+    },
+    "v_max": {
+     "prior": [
+      0.86,
+      2.05,
+      5.08
+     ],
+     "posterior": [
+      1.46,
+      3.14,
+      5.47
+     ]
+    },
+    "t0": {
+     "prior": [
+      73.33,
+      78.5,
+      83.48
+     ],
+     "posterior": [
+      75.39,
+      79.97,
+      83.84
+     ]
+    },
+    "fw_floor": {
+     "prior": [
+      0.1,
+      0.36,
+      0.63
+     ],
+     "posterior": [
+      0.12,
+      0.38,
+      0.63
+     ]
+    },
+    "biome_pen": {
+     "prior": [
+      124.11,
+      740.4,
+      1369.43
+     ],
+     "posterior": [
+      110.8,
+      780.67,
+      1371.92
+     ]
+    }
+   }
+  },
+  "ibs": {
+   "accepted": {
+    "coastal": 40,
+    "terrestrial": 89,
+    "mixed": 119
+   },
+   "post_strategy": {
+    "coastal": 0.161,
+    "terrestrial": 0.359,
+    "mixed": 0.48
+   },
+   "params": {
+    "c_adv": {
+     "prior": [
+      0.76,
+      0.96,
+      1.15
+     ],
+     "posterior": [
+      0.76,
+      0.98,
+      1.13
+     ]
+    },
+    "v_max": {
+     "prior": [
+      0.86,
+      2.05,
+      5.08
+     ],
+     "posterior": [
+      1.26,
+      2.93,
+      5.39
+     ]
+    },
+    "t0": {
+     "prior": [
+      73.33,
+      78.5,
+      83.48
+     ],
+     "posterior": [
+      80.11,
+      82.95,
+      84.33
+     ]
+    },
+    "fw_floor": {
+     "prior": [
+      0.1,
+      0.36,
+      0.63
+     ],
+     "posterior": [
+      0.13,
+      0.37,
+      0.61
+     ]
+    },
+    "biome_pen": {
+     "prior": [
+      124.11,
+      740.4,
+      1369.43
+     ],
+     "posterior": [
+      116.78,
+      758.45,
+      1311.46
+     ]
+    }
+   }
+  }
+ },
+ "benchmark": {
+  "timmermann_arrivaltime_ka": {
+   "arrivaltime_a": {
+    "S Arabia coast (Yemen)": 119.0,
+    "Jebel Faya (UAE)": 22.0,
+    "Nefud palaeolakes (N Arabia)": 15.0,
+    "Levant (Skhul/Manot)": 66.0,
+    "Jwalapuram (S India)": 101.0,
+    "Lida Ajer (Sumatra)": 87.0,
+    "Sulawesi (Maros / Muna)": 84.0,
+    "Madjedbebe (N Australia)": 5.0
+   },
+   "arrivaltime_b": {
+    "S Arabia coast (Yemen)": 85.0,
+    "Jebel Faya (UAE)": 24.0,
+    "Nefud palaeolakes (N Arabia)": 15.0,
+    "Levant (Skhul/Manot)": 68.0,
+    "Jwalapuram (S India)": 77.0,
+    "Lida Ajer (Sumatra)": 64.0,
+    "Sulawesi (Maros / Muna)": 61.0,
+    "Madjedbebe (N Australia)": 6.0
+   },
+   "arrivaltime_c": {
+    "S Arabia coast (Yemen)": 118.0,
+    "Jebel Faya (UAE)": 21.0,
+    "Nefud palaeolakes (N Arabia)": 15.0,
+    "Levant (Skhul/Manot)": 68.0,
+    "Jwalapuram (S India)": 100.0,
+    "Lida Ajer (Sumatra)": 87.0,
+    "Sulawesi (Maros / Muna)": 84.0,
+    "Madjedbebe (N Australia)": 5.0
+   }
+  },
+  "note_arrivaltime": "Timmermann 'arrivaltime' = time since LAST CONTINUOUS settlement, not first arrival; not comparable to our first-arrival times. Kept for reference only.",
+  "timmermann_first_arrival_ka": {
+   "human_density_a|thr0.01": {
+    "S Arabia coast (Yemen)": 125.0,
+    "Jebel Faya (UAE)": 109.0,
+    "Nefud palaeolakes (N Arabia)": 106.0,
+    "Levant (Skhul/Manot)": 105.0,
+    "Jwalapuram (S India)": 101.0,
+    "Lida Ajer (Sumatra)": 87.0,
+    "Sulawesi (Maros / Muna)": 84.0,
+    "Madjedbebe (N Australia)": 54.0
+   },
+   "human_density_a|thr0.1": {
+    "S Arabia coast (Yemen)": 125.0,
+    "Jebel Faya (UAE)": 108.0,
+    "Nefud palaeolakes (N Arabia)": 105.0,
+    "Levant (Skhul/Manot)": 104.0,
+    "Jwalapuram (S India)": 100.0,
+    "Lida Ajer (Sumatra)": 86.0,
+    "Sulawesi (Maros / Muna)": 84.0,
+    "Madjedbebe (N Australia)": 54.0
+   },
+   "human_density_b|thr0.01": {
+    "S Arabia coast (Yemen)": 125.0,
+    "Jebel Faya (UAE)": 82.0,
+    "Nefud palaeolakes (N Arabia)": 83.0,
+    "Levant (Skhul/Manot)": 82.0,
+    "Jwalapuram (S India)": 77.0,
+    "Lida Ajer (Sumatra)": 64.0,
+    "Sulawesi (Maros / Muna)": 62.0,
+    "Madjedbebe (N Australia)": 50.0
+   },
+   "human_density_b|thr0.1": {
+    "S Arabia coast (Yemen)": 125.0,
+    "Jebel Faya (UAE)": 82.0,
+    "Nefud palaeolakes (N Arabia)": 82.0,
+    "Levant (Skhul/Manot)": 82.0,
+    "Jwalapuram (S India)": 76.0,
+    "Lida Ajer (Sumatra)": 64.0,
+    "Sulawesi (Maros / Muna)": 61.0,
+    "Madjedbebe (N Australia)": 49.0
+   }
+  },
+  "lag_vs_first_arrival": {
+   "box|coastal": {
+    "ours_lag_ka_and_share": {
+     "Jebel Faya (UAE)": [
+      1.6,
+      0.99
+     ],
+     "Nefud palaeolakes (N Arabia)": [
+      1.6,
+      0.59
+     ],
+     "Levant (Skhul/Manot)": [
+      1.5,
+      0.7
+     ],
+     "Jwalapuram (S India)": [
+      4.4,
+      0.81
+     ],
+     "Lida Ajer (Sumatra)": [
+      7.3,
+      0.98
+     ],
+     "Sulawesi (Maros / Muna)": [
+      10.1,
+      0.98
+     ],
+     "Madjedbebe (N Australia)": [
+      13.4,
+      0.81
+     ]
+    },
+    "human_density_a|thr0.01": {
+     "n": 7,
+     "spearman": 0.88,
+     "median_abs_diff_ka": 19.6,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 16.0,
+      "Nefud palaeolakes (N Arabia)": 19.0,
+      "Levant (Skhul/Manot)": 20.0,
+      "Jwalapuram (S India)": 24.0,
+      "Lida Ajer (Sumatra)": 38.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_a|thr0.1": {
+     "n": 7,
+     "spearman": 0.88,
+     "median_abs_diff_ka": 20.6,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 17.0,
+      "Nefud palaeolakes (N Arabia)": 20.0,
+      "Levant (Skhul/Manot)": 21.0,
+      "Jwalapuram (S India)": 25.0,
+      "Lida Ajer (Sumatra)": 39.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_b|thr0.01": {
+     "n": 7,
+     "spearman": 0.92,
+     "median_abs_diff_ka": 43.6,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 42.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 48.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 63.0,
+      "Madjedbebe (N Australia)": 75.0
+     }
+    },
+    "human_density_b|thr0.1": {
+     "n": 7,
+     "spearman": 0.97,
+     "median_abs_diff_ka": 44.6,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 43.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 49.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 64.0,
+      "Madjedbebe (N Australia)": 76.0
+     }
+    }
+   },
+   "box|terrestrial": {
+    "ours_lag_ka_and_share": {
+     "Jebel Faya (UAE)": [
+      1.5,
+      1.0
+     ],
+     "Nefud palaeolakes (N Arabia)": [
+      1.0,
+      1.0
+     ],
+     "Levant (Skhul/Manot)": [
+      1.4,
+      1.0
+     ],
+     "Jwalapuram (S India)": [
+      4.5,
+      1.0
+     ],
+     "Lida Ajer (Sumatra)": [
+      7.6,
+      1.0
+     ],
+     "Sulawesi (Maros / Muna)": [
+      10.4,
+      1.0
+     ],
+     "Madjedbebe (N Australia)": [
+      14.4,
+      0.99
+     ]
+    },
+    "human_density_a|thr0.01": {
+     "n": 7,
+     "spearman": 0.89,
+     "median_abs_diff_ka": 19.5,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 16.0,
+      "Nefud palaeolakes (N Arabia)": 19.0,
+      "Levant (Skhul/Manot)": 20.0,
+      "Jwalapuram (S India)": 24.0,
+      "Lida Ajer (Sumatra)": 38.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_a|thr0.1": {
+     "n": 7,
+     "spearman": 0.89,
+     "median_abs_diff_ka": 20.5,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 17.0,
+      "Nefud palaeolakes (N Arabia)": 20.0,
+      "Levant (Skhul/Manot)": 21.0,
+      "Jwalapuram (S India)": 25.0,
+      "Lida Ajer (Sumatra)": 39.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_b|thr0.01": {
+     "n": 7,
+     "spearman": 0.99,
+     "median_abs_diff_ka": 43.5,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 42.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 48.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 63.0,
+      "Madjedbebe (N Australia)": 75.0
+     }
+    },
+    "human_density_b|thr0.1": {
+     "n": 7,
+     "spearman": 0.96,
+     "median_abs_diff_ka": 44.5,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 43.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 49.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 64.0,
+      "Madjedbebe (N Australia)": 76.0
+     }
+    }
+   },
+   "box|mixed": {
+    "ours_lag_ka_and_share": {
+     "Jebel Faya (UAE)": [
+      1.4,
+      1.0
+     ],
+     "Nefud palaeolakes (N Arabia)": [
+      0.9,
+      1.0
+     ],
+     "Levant (Skhul/Manot)": [
+      1.2,
+      1.0
+     ],
+     "Jwalapuram (S India)": [
+      3.3,
+      1.0
+     ],
+     "Lida Ajer (Sumatra)": [
+      5.7,
+      1.0
+     ],
+     "Sulawesi (Maros / Muna)": [
+      8.2,
+      1.0
+     ],
+     "Madjedbebe (N Australia)": [
+      11.9,
+      1.0
+     ]
+    },
+    "human_density_a|thr0.01": {
+     "n": 7,
+     "spearman": 0.89,
+     "median_abs_diff_ka": 20.7,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 16.0,
+      "Nefud palaeolakes (N Arabia)": 19.0,
+      "Levant (Skhul/Manot)": 20.0,
+      "Jwalapuram (S India)": 24.0,
+      "Lida Ajer (Sumatra)": 38.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_a|thr0.1": {
+     "n": 7,
+     "spearman": 0.89,
+     "median_abs_diff_ka": 21.7,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 17.0,
+      "Nefud palaeolakes (N Arabia)": 20.0,
+      "Levant (Skhul/Manot)": 21.0,
+      "Jwalapuram (S India)": 25.0,
+      "Lida Ajer (Sumatra)": 39.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_b|thr0.01": {
+     "n": 7,
+     "spearman": 0.99,
+     "median_abs_diff_ka": 44.7,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 42.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 48.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 63.0,
+      "Madjedbebe (N Australia)": 75.0
+     }
+    },
+    "human_density_b|thr0.1": {
+     "n": 7,
+     "spearman": 0.96,
+     "median_abs_diff_ka": 45.7,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 43.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 49.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 64.0,
+      "Madjedbebe (N Australia)": 76.0
+     }
+    }
+   },
+   "ibs|coastal": {
+    "ours_lag_ka_and_share": {
+     "Jebel Faya (UAE)": [
+      1.4,
+      1.0
+     ],
+     "Nefud palaeolakes (N Arabia)": [
+      null,
+      0.14
+     ],
+     "Levant (Skhul/Manot)": [
+      11.7,
+      0.46
+     ],
+     "Jwalapuram (S India)": [
+      4.2,
+      0.86
+     ],
+     "Lida Ajer (Sumatra)": [
+      7.5,
+      1.0
+     ],
+     "Sulawesi (Maros / Muna)": [
+      10.1,
+      1.0
+     ],
+     "Madjedbebe (N Australia)": [
+      27.9,
+      0.45
+     ]
+    },
+    "human_density_a|thr0.01": {
+     "n": 6,
+     "spearman": 0.66,
+     "median_abs_diff_ka": 25.1,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 16.0,
+      "Nefud palaeolakes (N Arabia)": 19.0,
+      "Levant (Skhul/Manot)": 20.0,
+      "Jwalapuram (S India)": 24.0,
+      "Lida Ajer (Sumatra)": 38.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_a|thr0.1": {
+     "n": 6,
+     "spearman": 0.66,
+     "median_abs_diff_ka": 25.9,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 17.0,
+      "Nefud palaeolakes (N Arabia)": 20.0,
+      "Levant (Skhul/Manot)": 21.0,
+      "Jwalapuram (S India)": 25.0,
+      "Lida Ajer (Sumatra)": 39.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_b|thr0.01": {
+     "n": 6,
+     "spearman": 0.55,
+     "median_abs_diff_ka": 45.5,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 42.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 48.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 63.0,
+      "Madjedbebe (N Australia)": 75.0
+     }
+    },
+    "human_density_b|thr0.1": {
+     "n": 6,
+     "spearman": 0.55,
+     "median_abs_diff_ka": 46.5,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 43.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 49.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 64.0,
+      "Madjedbebe (N Australia)": 76.0
+     }
+    }
+   },
+   "ibs|terrestrial": {
+    "ours_lag_ka_and_share": {
+     "Jebel Faya (UAE)": [
+      3.2,
+      0.94
+     ],
+     "Nefud palaeolakes (N Arabia)": [
+      17.0,
+      0.92
+     ],
+     "Levant (Skhul/Manot)": [
+      9.8,
+      0.94
+     ],
+     "Jwalapuram (S India)": [
+      9.8,
+      0.94
+     ],
+     "Lida Ajer (Sumatra)": [
+      11.4,
+      0.94
+     ],
+     "Sulawesi (Maros / Muna)": [
+      13.7,
+      0.93
+     ],
+     "Madjedbebe (N Australia)": [
+      20.5,
+      0.85
+     ]
+    },
+    "human_density_a|thr0.01": {
+     "n": 7,
+     "spearman": 0.63,
+     "median_abs_diff_ka": 14.2,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 16.0,
+      "Nefud palaeolakes (N Arabia)": 19.0,
+      "Levant (Skhul/Manot)": 20.0,
+      "Jwalapuram (S India)": 24.0,
+      "Lida Ajer (Sumatra)": 38.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_a|thr0.1": {
+     "n": 7,
+     "spearman": 0.63,
+     "median_abs_diff_ka": 15.2,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 17.0,
+      "Nefud palaeolakes (N Arabia)": 20.0,
+      "Levant (Skhul/Manot)": 21.0,
+      "Jwalapuram (S India)": 25.0,
+      "Lida Ajer (Sumatra)": 39.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_b|thr0.01": {
+     "n": 7,
+     "spearman": 0.43,
+     "median_abs_diff_ka": 39.8,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 42.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 48.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 63.0,
+      "Madjedbebe (N Australia)": 75.0
+     }
+    },
+    "human_density_b|thr0.1": {
+     "n": 7,
+     "spearman": 0.6,
+     "median_abs_diff_ka": 39.8,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 43.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 49.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 64.0,
+      "Madjedbebe (N Australia)": 76.0
+     }
+    }
+   },
+   "ibs|mixed": {
+    "ours_lag_ka_and_share": {
+     "Jebel Faya (UAE)": [
+      1.4,
+      1.0
+     ],
+     "Nefud palaeolakes (N Arabia)": [
+      15.6,
+      0.98
+     ],
+     "Levant (Skhul/Manot)": [
+      2.6,
+      1.0
+     ],
+     "Jwalapuram (S India)": [
+      3.3,
+      1.0
+     ],
+     "Lida Ajer (Sumatra)": [
+      6.3,
+      1.0
+     ],
+     "Sulawesi (Maros / Muna)": [
+      8.5,
+      1.0
+     ],
+     "Madjedbebe (N Australia)": [
+      13.2,
+      1.0
+     ]
+    },
+    "human_density_a|thr0.01": {
+     "n": 7,
+     "spearman": 0.46,
+     "median_abs_diff_ka": 20.7,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 16.0,
+      "Nefud palaeolakes (N Arabia)": 19.0,
+      "Levant (Skhul/Manot)": 20.0,
+      "Jwalapuram (S India)": 24.0,
+      "Lida Ajer (Sumatra)": 38.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_a|thr0.1": {
+     "n": 7,
+     "spearman": 0.46,
+     "median_abs_diff_ka": 21.7,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 17.0,
+      "Nefud palaeolakes (N Arabia)": 20.0,
+      "Levant (Skhul/Manot)": 21.0,
+      "Jwalapuram (S India)": 25.0,
+      "Lida Ajer (Sumatra)": 39.0,
+      "Sulawesi (Maros / Muna)": 41.0,
+      "Madjedbebe (N Australia)": 71.0
+     }
+    },
+    "human_density_b|thr0.01": {
+     "n": 7,
+     "spearman": 0.23,
+     "median_abs_diff_ka": 44.7,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 42.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 48.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 63.0,
+      "Madjedbebe (N Australia)": 75.0
+     }
+    },
+    "human_density_b|thr0.1": {
+     "n": 7,
+     "spearman": 0.44,
+     "median_abs_diff_ka": 45.7,
+     "theirs_lag_ka": {
+      "Jebel Faya (UAE)": 43.0,
+      "Nefud palaeolakes (N Arabia)": 43.0,
+      "Levant (Skhul/Manot)": 43.0,
+      "Jwalapuram (S India)": 49.0,
+      "Lida Ajer (Sumatra)": 61.0,
+      "Sulawesi (Maros / Muna)": 64.0,
+      "Madjedbebe (N Australia)": 76.0
+     }
+    }
+   }
+  },
+  "note_lag": "lag = years after reaching the S Arabian coast; ours = median over L runs that reach both (share = fraction of runs reaching both; None if <25%); theirs from density first-arrival. Not independent validation: both models share LOVECLIM-family climate assumptions."
+ },
+ "loveclim_arabia_desert_fr_pct": {
+  "35": 64.3,
+  "36": 74.3,
+  "37": 61.1,
+  "38": 51.6,
+  "39": 75.3,
+  "40": 69.3,
+  "41": 57.4,
+  "42": 69.0,
+  "43": 60.7,
+  "44": 65.2,
+  "45": 66.6,
+  "46": 63.1,
+  "47": 63.9,
+  "48": 81.9,
+  "49": 73.4,
+  "50": 56.9,
+  "51": 54.5,
+  "52": 54.5,
+  "53": 54.9,
+  "54": 51.2,
+  "55": 47.6,
+  "56": 51.7,
+  "57": 48.8,
+  "58": 41.1,
+  "59": 47.0,
+  "60": 41.8,
+  "61": 73.1,
+  "62": 72.1,
+  "63": 77.0,
+  "64": 72.6,
+  "65": 66.4,
+  "66": 79.6,
+  "67": 82.1,
+  "68": 77.8,
+  "69": 84.7,
+  "70": 83.8,
+  "71": 83.7,
+  "72": 79.5,
+  "73": 80.9,
+  "74": 78.8,
+  "75": 77.9,
+  "76": 65.5,
+  "77": 52.2,
+  "78": 66.0,
+  "79": 50.2,
+  "80": 36.1,
+  "81": 20.2,
+  "82": 15.3,
+  "83": 8.6,
+  "84": 4.4,
+  "85": 4.9,
+  "86": 26.7,
+  "87": 50.8,
+  "88": 62.0,
+  "89": 43.1,
+  "90": 45.3,
+  "91": 52.6,
+  "92": 58.2,
+  "93": 64.0,
+  "94": 70.5,
+  "95": 73.0,
+  "96": 67.0,
+  "97": 61.5,
+  "98": 57.8,
+  "99": 51.6,
+  "100": 47.5
+ }
+}
